@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+<IfModule fcgid_module>
+    <IfModule mime_module>
+        AddHandler fcgid-script .php .php8 .phtml
+        FcgidWrapper /usr/local/cpanel/cgi-sys/ea-php81 .php
+        FcgidWrapper /usr/local/cpanel/cgi-sys/ea-php81 .php8
+        FcgidWrapper /usr/local/cpanel/cgi-sys/ea-php81 .phtml
+    </IfModule>
+</IfModule>
+
+# php -- END cPanel-generated handler, do not edit
