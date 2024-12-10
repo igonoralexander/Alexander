@@ -22,10 +22,3 @@ Route::post('/email', [EmailController::class, 'sendEmail']) -> name('send.email
 
 Route::get('/download/{filename}', [FileController::class, 'download'])->name('file.download');
 
-Route::post('/admin/add-project', [ProjectsController::class, 'store'])->name('add-project');
-
-Route::get('/admin/login', [AdminController::class, 'index'])->middleware('AdloggedIn');
-Route::post('/admin/checklogin', [AdminController::class, 'store'])->name('admin-login');
-Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware('isAdLoggedIn');
-Route::get('/admin/logout', [AdminController::class, 'logout']);
-

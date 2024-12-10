@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 
 use App\Models\Admin;
+use App\Models\Contact;
 
 class AdminController extends Controller
 {
@@ -18,21 +19,64 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+
     public function index()
     {
-        return view('admin.login');
+        return view('backend.auth.login');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function parallaxSection()
     {
-       
+        return view('backend.landingpage.parallax-section');
+     
     }
 
+    public function clients()
+    {
+        return view('backend.landingpage.clients');
+    }
+
+    public function techStacks()
+    {
+        return view('backend.landingpage.tech-stacks');
+    }
+
+    public function createWhyChooseUs()
+    {
+        return view('backend.landingpage.why-choose-us');
+    }
+
+    public function createCoreValues()
+    {
+        return view('backend.landingpage.core-values');
+    }
+
+    public function createCadreLevels()
+    {
+        return view('backend.pages.cadre-levels');
+    }
+
+    public function createHowWeWork()
+    {
+        return view('backend.landingpage.how-we-work');
+    }
+
+    public function viewContacts()
+    {
+        return view('backend.pages.contact-view');
+    }
+
+    public function changePassword()
+    {
+        return view('backend.pages.change-password');
+    }
+    
+    public function dashboard()
+    {
+        $contacts = Contact::All();
+        return view('backend.dashboard', compact('contacts'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -41,10 +85,15 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $request-> validate([
-            'username'     => 'required',
-            'password'  => 'required|min:8'
+            'username'     => 'required|exists:admins,username',
+            'password'  => 'required|min:6'
+        ],
+            [
+                'username.required' => 'Enter username',
+                'username.exists' => 'Username not found',
+                'password.required' => 'Password is required',
+                'password.min' => 'Password must be more that 6 characters'
             ]);
 
             $admin = Admin::where('username', '=', $request->username)->first();
@@ -53,17 +102,12 @@ class AdminController extends Controller
                 if (Hash::check($request->password, $admin->password))
                     {
                         $request->session()->put('AdmLogId', $admin->id);
-                        return redirect ('/dashboard')->with ('Success', 'Login Successfull, Welcome');
+                        return redirect()->route('admin.dashboard')->with ('success', 'Login Successfull, Welcome');
                     }
                     else
-                    {
-                        return back ()->with ('Failed', 'Password is incorrect');           
+                    { 
+                        return back()->with ('fail', 'Username or Password is incorrect, try again');;           
                     }
-            } 
-            else
-
-            {
-                return back ()->with ('Failed', 'Email not found');           
             }
     }
 
@@ -73,9 +117,9 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Admin $admin)
+    public function show($id)
     {
-        //
+
     }
 
     /**
@@ -112,26 +156,12 @@ class AdminController extends Controller
         //
     }
 
-    public function dashboard()
-    {
-        $data = array();
-
-        if (session::has('AdmLogId'))
-        {
-            $data = Admin::where('id', '=', session::get('AdmLogId'))->first();
-        }
-        return view('admin.projects', compact('data'));
-    }
-
     public function logout()
     {
         if (session::has('AdmLogId'))
         {
             Session::pull('AdmLogId');
-
-            return redirect ('/');
+            return redirect()->route('admin.login');
         }
-        
     }
-
 }
