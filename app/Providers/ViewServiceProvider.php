@@ -54,6 +54,7 @@ class ViewServiceProvider extends ServiceProvider
             $mostReadPosts = BlogPost::orderBy('views_count', 'desc')->take(5)->get();
 
             $view->with([
+                'setting' => SiteSettings::first(),
                 'favicon' => $settings ? $settings->favicon : null,
                 'logo' => $settings ? $settings->logo : null,
                 'breadcrumb_image' => $settings ? $settings->breadcrumb_image : null,

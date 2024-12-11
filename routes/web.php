@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ProjectsController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +15,14 @@ use App\Http\Controllers\FileController;
 |
 */
 
-Route::get('/', [ProjectsController::class, 'index']);
+use App\Models\SeoMeta;
+
+Route::get('/', function () {
+    $seometa = SeoMeta::where('page_name', 'Home')->first();
+    return view('frontend.index', compact('seometa'));
+});
+
+// Route::get('/', [ProjectsController::class, 'index']);
 
 Route::post('/email', [EmailController::class, 'sendEmail']) -> name('send.email');
 
