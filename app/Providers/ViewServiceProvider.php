@@ -77,8 +77,7 @@ class ViewServiceProvider extends ServiceProvider
                 'events' => Events::all(),
                 'howwework' => HowWeWork::all(),
                 'blogs' => BlogPost::with(['admin', 'blogcategory'])
-                        ->orderBy('created_at', 'desc')
-                        ->take(3)->get(),
+                        ->orderBy('created_at', 'desc')->get(),
                 
                 'blogpage' => BlogPost::with(['admin', 'blogcategory'])
                         ->orderBy('created_at', 'desc')->get(),

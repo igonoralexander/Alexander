@@ -20,8 +20,9 @@
                                         </li>
                                     </ul>
                                     <ul class="tf-social-icon d-flex gap-10">
-                                        <li><a href="#" class="box-icon w_34 round social-linkedin social-line"><i class="icon fs-14 icon-linkedin"></i></a></li>
-                                        <li><a href="#" class="box-icon w_34 round social-instagram social-line"><i class="icon fs-14 icon-instagram"></i></a></li>
+                                        <li><a href="#" target="_blank" class="box-icon w_34 round social-facebook social-line"><i class="fas fa-briefcase"></i></a></li>
+                                        <li><a href="#" target="_blank" class="box-icon w_34 round social-instagram social-line"><i class="fas fa-code"></i></a></li>
+                                        
                                         
                                     </ul>
                                 </div>
@@ -35,14 +36,14 @@
                                 </div>
                                 <ul class="footer-menu-list tf-collapse-content">
                                     <li>
-                                        <a href="privacy-policy.html" class="footer-menu_item">Privacy Policy</a>
+                                        <a href="/privacy-policy" class="footer-menu_item">Privacy Policy</a>
                                     </li>
 
                                     <li> 
-                                        <a href="terms-conditions.html" class="footer-menu_item">Terms &amp; Conditions</a>
+                                        <a href="/terms-conditions" class="footer-menu_item">Terms &amp; Conditions</a>
                                     </li>
                                     <li> 
-                                        <a href="faq-1.html" class="footer-menu_item">FAQ’s</a>
+                                        <a href="/faq" class="footer-menu_item">FAQ’s</a>
                                     </li>
 
                                 </ul>

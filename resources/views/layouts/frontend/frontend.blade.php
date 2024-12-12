@@ -19,6 +19,8 @@
    <link rel="stylesheet" href="{{ asset ('frontend/css/bootstrap.min.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/swiper-bundle.min.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/animate.css') }}">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
    <link rel="stylesheet" type="text/css" href="{{ asset ('frontend/css/styles.css') }}"/>
 
     <!-- Favicon and Touch Icons  -->

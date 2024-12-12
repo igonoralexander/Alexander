@@ -40,19 +40,13 @@
                     @endif
 
                     <div class="form-group">
-                        <label for="name">Small Title</label>
-                        <input type="text" wire:model="small_title" class="form-control" id="small_title" required />
-                        @error('small_title') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Big Title</label>
+                        <label for="name">Title</label>
                         <input type="text" wire:model="big_title" class="form-control" id="big_title" required />
                         @error('big_title') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description">Bio</label>
                         <textarea wire:model="description" class="form-control" id="description" rows="5"></textarea>
                         @error('description') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
@@ -71,7 +65,7 @@
 
                     <div class="form-group">
                         <label for="image">Image</label>
-                        <input type="file" accept = "image/png, image/jpg, image/jpeg" wire:model="image" class="form-control-file" id="image" />
+                        <input type="file" wire:model="image" class="form-control-file" id="image" />
                         @error('image') <span class="text-danger">{{ $message }}</span> @enderror
                 
                     </div>

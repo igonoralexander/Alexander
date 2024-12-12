@@ -1,5 +1,5 @@
 @extends('layouts.backend.admin')
-@section('pageTitle', isset($pageTitle) ? $pageTitle: 'IG Software Nig - Admin Dashboard')
+@section('pageTitle', isset($pageTitle) ? $pageTitle: $setting->site_title . ' - Admin Management')
 
 @section('content')
     

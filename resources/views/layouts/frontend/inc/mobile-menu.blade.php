@@ -10,30 +10,49 @@
                     </li>
 
                     <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">About Me</a>
+                    </li>
+
+                    <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">Services</a>
+                    </li>
+
+                    <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">Portfolio/Project</a>
+                    </li>
+
+                    <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">Articles</a>
+                    </li>
+
+                    <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">Testimonials</a>
+                    </li>
+
+                    <li class="nav-mb-item">
+                        <a href="/" class="mb-menu-link">Contact</a>
+                    </li>
+
+                    <li class="nav-mb-item">
                         <a href="#dropdown-menu-four" class="collapsed mb-menu-link current" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-four">
                             <span>Pages</span>
                             <span class="btn-open-sub"></span>
                         </a>
                         <div id="dropdown-menu-four" class="collapse">
                             <ul class="sub-nav-menu" id="sub-menu-navigation">
-                                <li><a href="about-us.html" class="sub-nav-link">About us</a></li>
                                 <li><a href="about-us.html" class="sub-nav-link">Skills</a></li>
-                                <li><a href="about-us.html" class="sub-nav-link">Portfolio</a></li>
-                                <li><a href="contact-2.html" class="sub-nav-link">Contact</a></li>
                                 <li><a href="faq-2.html" class="sub-nav-link">FAQ</a></li>
                             </ul>
                         </div>
                         
                     </li>
                   
-                    <li class="nav-mb-item">
-                        <a href="/" class="mb-menu-link">Articles</a>
-                    </li>
+                    
 
                 </ul>
                 <div class="mb-other-content">
                     <div class="d-flex group-icon">
-                        <a href="home-search.html" class="site-nav-icon"><i class="icon icon-search"></i>Search</a>
+                        <a href="home-search.html" class="site-nav-icon"><i i class="fas fa-file-download"></i>Download Cv</a>
                     </div>
                     <div class="mb-notice">
                         <a href="contact-1.html" class="text-need">Hire Me</a>
@@ -42,21 +61,6 @@
                         <li>Email: <b>info@fashionshop.com</b></li>
                         <li>Phone: <b>(212) 555-1234</b></li>
                     </ul>
-                </div>
-            </div>
-            <div class="mb-bottom">
-                <a href="login.html" class="site-nav-icon"><i class="icon icon-account"></i>Login</a>
-                <div class="bottom-bar-language">
-
-                    <div class="tf-languages">
-                        <select class="image-select center style-default type-languages">
-                            <option>English</option>
-                            <option>العربية</option>
-                            <option>简体中文</option>
-                            <option>اردو</option>
-                        </select>
-                    </div>
-                    
                 </div>
             </div>
         </div>       

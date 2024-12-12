@@ -10,38 +10,28 @@
         </div>
         
         <div class="toolbar-item">
-            <a href="#canvasSearch" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft">
-                <div class="toolbar-icon">
-                    <i class="icon-search"></i>
-                </div>
-                <div class="toolbar-label">Search</div>
-            </a>
-        </div>
-        <div class="toolbar-item">
-            <a href="#login" data-bs-toggle="modal">
+            <a href="/">
                 <div class="toolbar-icon">
                     <i class="icon-account"></i>
                 </div>
-                <div class="toolbar-label">Account</div>
+                <div class="toolbar-label">About Me</div>
             </a>
         </div>
-        <!-- <div class="toolbar-item">
+        <div class="toolbar-item">
             <a href="wishlist.html">
                 <div class="toolbar-icon">
-                    <i class="icon-heart"></i>
-                    <div class="toolbar-count">0</div>
+                    <i class="fas fa-briefcase"></i>
                 </div>
-                <div class="toolbar-label">Wishlist</div>
+                <div class="toolbar-label">Portfolio</div>
             </a>
         </div>
         <div class="toolbar-item">
             <a href="#shoppingCart" data-bs-toggle="modal">
                 <div class="toolbar-icon">
-                    <i class="icon-bag"></i>
-                    <div class="toolbar-count">1</div>
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <div class="toolbar-label">Cart</div>
+                <div class="toolbar-label">Contact</div>
             </a>
-        </div> -->
+        </div>
     </div>
     <!-- /toolbar-bottom -->
