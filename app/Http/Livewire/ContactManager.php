@@ -14,24 +14,23 @@ class ContactManager extends Component
     use WithFileUploads;
     
     public $selectedId = null;
-    public $small_title, $big_title, $description;
-    public $image_path, $location_name, $address, $phone, $email;
+    public $title, $description;
+    public $image_path, $github, $linkedin, $phone, $email;
     public $facebook_link, $twitter_link, $instagram_link, $youtube_link;
     public $data, $existingImage;
 
     protected $messages = [
-        'big_title.required' => 'Contact title required',
+        'title.required' => 'Contact title required',
         'image_path.required' => 'Upload image',
     ];
 
     protected function rules()
     {
         return [
-            'big_title' => 'nullable|string|max:255|unique:contact_us,big_title,' . $this->selectedId,
-            'small_title' => 'nullable|string',
+            'title' => 'nullable|string|max:255|unique:contact_us,title,' . $this->selectedId,
             'description' => 'nullable|string',
-            'location_name' => 'nullable|string',
-            'address' => 'nullable|string',
+            'github' => 'nullable|string',
+            'linkedin' => 'nullable|string',
             'phone' => 'nullable|string',
             'email' => 'nullable|string',
             'facebook_link' => 'nullable|string',
@@ -55,11 +54,10 @@ class ContactManager extends Component
     public function resetForm()
     {
         $this->selectedId = null;
-        $this->big_title = '';
-        $this->small_title = '';
+        $this->title = '';
         $this->description = '';
-        $this->address = '';
-        $this->location_name = '';
+        $this->linkedin = '';
+        $this->github = '';
         $this->phone = '';
         $this->email = '';
         $this->facebook_link = '';
@@ -88,11 +86,10 @@ class ContactManager extends Component
                      $contact->image_path = 'storage/' . $file;
                  }
 
-                 $contact->small_title = $this->small_title;
-                 $contact->big_title = $this->big_title;
+                 $contact->title = $this->title;
                  $contact->description = $this->description;
-                 $contact->address = $this->address;
-                 $contact->location_name = $this->location_name;
+                 $contact->linkedin = $this->linkedin;
+                 $contact->github = $this->github;
                  $contact->phone = $this->phone;
                  $contact->email = $this->email;
                  $contact->facebook_link = $this->facebook_link;
@@ -109,11 +106,10 @@ class ContactManager extends Component
              } else {
  
                $this->validate([
-                    'big_title' => 'required|string|max:255|unique:contact_us,big_title,' . $this->selectedId,
-                    'small_title' => 'nullable|string',
+                    'title' => 'required|string|max:255|unique:contact_us,title,' . $this->selectedId,
                     'description' => 'nullable|string',
-                    'address' => 'nullable|string',
-                    'location_name' => 'nullable|string',
+                    'linkedin' => 'nullable|string',
+                    'github' => 'nullable|string',
                     'phone' => 'nullable|string',
                     'email' => 'nullable|string',
                     'facebook_link' => 'nullable|string',
@@ -128,11 +124,10 @@ class ContactManager extends Component
                  $file = $this->image_path->storeAs($folder, $imageName, 'public');
      
                  $contact = new ContactUs();
-                 $contact->small_title = $this->small_title;
-                 $contact->big_title = $this->big_title;
+                 $contact->title = $this->title;
                  $contact->description = $this->description;
-                 $contact->address = $this->address;
-                 $contact->location_name = $this->location_name;
+                 $contact->linkedin = $this->linkedin;
+                 $contact->github = $this->github;
                  $contact->phone = $this->phone;
                  $contact->email = $this->email;
                  $contact->facebook_link = $this->facebook_link;
@@ -155,11 +150,10 @@ class ContactManager extends Component
     {
         $contact = ContactUs::findOrFail($id);
         $this->selectedId = $contact->id;
-        $this->small_title = $contact->small_title;
-        $this->big_title = $contact->big_title;
+        $this->title = $contact->title;
         $this->description = $contact->description;
-        $this->address = $contact->address;
-        $this->location_name = $contact->location_name;
+        $this->linkedin = $contact->linkedin;
+        $this->github = $contact->github;
         $this->phone = $contact->phone;
         $this->email = $contact->email;
         $this->facebook_link = $contact->facebook_link;

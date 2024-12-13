@@ -10,7 +10,7 @@
         </div>
         
         <div class="toolbar-item">
-            <a href="/">
+            <a href="/about">
                 <div class="toolbar-icon">
                     <i class="icon-account"></i>
                 </div>
@@ -26,7 +26,7 @@
             </a>
         </div>
         <div class="toolbar-item">
-            <a href="#shoppingCart" data-bs-toggle="modal">
+            <a href="/" data-bs-toggle="modal">
                 <div class="toolbar-icon">
                     <i class="fas fa-envelope"></i>
                 </div>

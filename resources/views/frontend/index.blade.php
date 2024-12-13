@@ -7,22 +7,34 @@
 @endsection
 
 @section('content')
-     <!-- slider -->
-     <div class="tf-slideshow slideshow-men slider-effect-fade position-relative">
-            <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="false" data-auto-play="false" data-delay="2000" data-speed="1000">
+        <!-- Slider -->
+        <div class="tf-slideshow slider-effect-fade position-relative"> 
+            <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="true" data-auto-play="false" data-delay="0" data-speed="1000">
                 <div class="swiper-wrapper">
                     @foreach ($mainslider as $item)
-                        <div class="swiper-slide" lazy="true">
+                        <div class="swiper-slide">
                             <div class="wrap-slider">
-                                <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ asset($item->title) }}" >
+                                <img src="{{ asset($item->image) }}" alt="{{ $item->title }}">
+                                <div class="box-content">
+                                    <div class="container">
+                                        <h1 class="fade-item fade-item-1">{{ $item->title }}</h1>
+                                        <p class="fade-item fade-item-2">{{ $item->description }}</p>
+                                        <a href="{{ $item->link }}" class="fade-item fade-item-3 tf-btn btn-fill animate-hover-btn btn-xl radius-3"><span>{{ $item->button_title }}</span><i class="icon icon-arrow-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endforeach
-                   
+
+                </div>
+            </div>
+            <div class="wrap-pagination">
+                <div class="container">
+                    <div class="sw-dots sw-pagination-slider justify-content-center"></div>
                 </div>
             </div>
         </div>
-        <!-- /slider -->
+        <!-- /Slider -->
 
         <!-- About -->
         <section class="flat-spacing-10 bg_white">

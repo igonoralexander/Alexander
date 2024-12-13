@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 use App\Models\Contact;
 use App\Models\SeoMeta;
@@ -35,12 +35,9 @@ class ContactController extends Controller
          $request->validate([
              'name' => 'required',
              'email' => 'required|email',
-             'phone' => 'required',
-             'subject' => 'required',
              'content' => 'required',
-             'terms_agreement' => 'accepted',
          ]);
-     
+         $subject = 'New Message';
          $thankyou_name = $request->name;
          $seometa = SeoMeta::where('page_name', 'Thank You')->first();
 
@@ -48,16 +45,13 @@ class ContactController extends Controller
          $data = [
              'name' => $request->name,
              'email' => $request->email,
-             'phone' => $request->phone,
-             'subject' => $request->subject,
              'content' => $request->content,
+             
          ];
      
         //  try {
-
-             Mail::send('emails.contact', $data, function ($message) use ($data) {
-                 $message->to('contact@igsoftware.com.ng')
-                     ->subject($data['subject']);
+              Mail::send('emails.contact', $data, function ($message) use ($data, $subject) {
+                 $message->to('igonoralexander@gmail.com')->subject($subject);
              });
 
             // If email sent successfully, store in the database

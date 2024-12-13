@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +23,8 @@ Route::get('/', function () {
 });
 
 // Route::get('/', [ProjectsController::class, 'index']);
+
+Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 
 Route::post('/email', [EmailController::class, 'sendEmail']) -> name('send.email');
 

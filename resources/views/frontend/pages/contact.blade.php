@@ -1,4 +1,4 @@
-@extends('layouts.frontend.pages')
+@extends('layouts.frontend.frontend')
 
 @section('style')
 	<style>
@@ -7,49 +7,75 @@
 @endsection
 
 @section('content')
-
-    @include('partials.breadcrumb')
-
-    <!--Contact Section-->
-    <section class="contact-section contact-page">
-        <div class="icon-one paroller" data-paroller-factor="-0.20" data-paroller-factor-lg="-0.20" data-paroller-factor-sm="-0.10" data-paroller-type="foreground" data-paroller-direction="horizontal"><span class="flaticon-heart-2"></span></div>
-        
-        <div class="icon-two paroller" data-paroller-factor="0.20" data-paroller-factor-lg="0.15" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="horizontal"><span class="flaticon-heart-2"></span></div>
-
-        <div class="icon-three paroller" data-paroller-factor="-0.10" data-paroller-factor-lg="-0.15" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="horizontal"><span class="flaticon-dove"></span></div>
-
-        <div class="auto-container">
-            @include('layouts.frontend.inc.contact-form')
+        <!-- page-title -->
+        <div class="tf-page-title style-2">
+            <div class="container-full">
+                <div class="heading text-center">Contact Me</div>
+            </div>
         </div>
-            <div class="info-container">
-                <div class="row clearfix">
-                    
-                    <!--Info Block-->
-                    <div class="info-block bg-blue col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <h3>{{ $contact->location_name }}</h3>
-                            <ul class="info">
-                                <li><span class="fa fa-map-marker-alt"></span> {{ $contact->address }}</li>
-                                <li><span class="fa fa-phone-alt"></span> <a href="tel:812-070-3692">Phone {{ $contact->phone }}</a></li>
-                                <li><span class="fa fa-envelope-open"></span> <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></li>
-                            </ul>
-                            <ul class="social-links clearfix">
-                                <li><a href="{{ $contact->facebook_link }}"><span class="fab fa-facebook-f"></span></a></li>
-                                <li><a href="{{ $contact->twitter_link }}"><span class="fab fa-twitter"></span></a></li>
-                                <!-- <li><a href="#"><span class="fab fa-vimeo-v"></span></a></li> -->
-                                <li><a href="{{ $contact->instagram_link }}"><span class="fab fa-instagram"></span></a></li>
-                                <li><a href="{{ $contact->youtube_link }}"><span class="fab fa-youtube"></span></a></li>
+        <!-- /page-title -->
+        <!-- form -->
+        <section class="flat-spacing-21">
+            <div class="container">
+                <div class="tf-grid-layout gap30 lg-col-2">
+                    <div class="tf-content-left">
+                        <h5 class="mb_20">Contact Me</h5>
+                        <div class="mb_20">
+                            <p class="mb_15"><strong>Phone</strong></p>
+                            <p>{{ $contact->phone }}</p>
+                        </div>
+                        <div class="mb_20">
+                            <p class="mb_15"><strong>Email</strong></p>
+                            <p>{{ $contact->email }}</p>
+                        </div>
+                        <div class="mb_36">
+                            <p class="mb_15"><strong>My Availability</strong></p>
+                            <p class="mb_15">I am available for consultations and collaborations daily from 9 AM to 7 PM.</p>
+                        </div>
+                        <div>
+                            <ul class="tf-social-icon d-flex gap-20 style-default">
+                                <li><a href="{{ $contact->linkedin }}" target="_blank" class="box-icon link round social-linkedin border-line-black"><i class="fab fa-linkedin fs-14"></i></a></li>
+                                <li><a href="{{ $contact->github }}" target="_blank" class="box-icon link round social-github border-line-black"><i class="fab fa-github fs-14"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                   
+                    <div class="tf-content-right">
+                        <h5 class="mb_20">{{ $contact->title }}</h5>
+                        <p class="mb_24">{{ $contact->description }}</p>
+                        <div>
+                            <form class="form-contact" id="contactform" action="{{ route('send.email') }}" method="post">
+                                @csrf
+                                @if (session()->has('message'))
+                                    <div class="alert alert-success">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
+
+                                <div class="d-flex gap-15 mb_15">
+                                    <fieldset class="w-100">
+                                        <input type="text" name="name" id="name" required placeholder="Name *"/>
+                                        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </fieldset>
+
+                                    <fieldset class="w-100">
+                                        <input type="email" name="email" id="email" required placeholder="Email *"/>
+                                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </fieldset>
+                                </div>
+                                <div class="mb_15">
+                                    <textarea placeholder="Message" name="content" id="content" required cols="30" rows="10"></textarea>
+                                    @error('content') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+
+                                <div class="send-wrap">
+                                    <button type="submit" class="tf-btn w-100 radius-3 btn-fill animate-hover-btn justify-content-center">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            @include('layouts.frontend.inc.newsletter-cta')
-            
-        </div>
-
-    </section>
+        </section>
+        <!-- /form -->
 
 @endsection

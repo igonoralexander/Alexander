@@ -1,7 +1,6 @@
   <!-- header -->
-  <header id="header" class="header-default header-style-2">
-            <div class="main-header line">
-                <div class="container-full px_15 lg-px_40">
+  <header id="header" class="header-default header-absolute">
+                <div class="px_15 lg-px_40">
                     <div class="row wrapper-header align-items-center">
                         <div class="col-md-4 col-3 tf-lg-hidden">
                             <a href="#mobileMenu" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft">
@@ -24,7 +23,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="header-bottom line">
                 <div class="container-full px_15 lg-px_40">
                     <div class="wrapper-header d-flex justify-content-center align-items-center">
@@ -42,8 +40,7 @@
                                             <li>
                                                 <a href="about-us.html" class="menu-link-text link text_black-2">About me</a>
                                             </li>
-
-                                            <li><a href="view-cart.html" class="menu-link-text link text_black-2 position-relative">View cart</a></li>
+                                            <li><a href="view-cart.html" class="menu-link-text link text_black-2 position-relative">Services</a></li>
                                             <li><a href="checkout.html" class="menu-link-text link text_black-2 position-relative">Check out</a></li>
 
                                         </ul>
@@ -51,7 +48,12 @@
                                 </li>
 
                                 <li class="menu-item position-relative">
-                                    <a href="/blog" class="item-link">Blog</a>
+                                    <a href="/blog" class="item-link">Aritcles</a>
+                                </li>
+
+                                
+                                <li class="menu-item position-relative">
+                                    <a href="/blog" class="item-link">Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -59,6 +61,5 @@
                     </div>
                 </div>
             </div>
-            
         </header>
         <!-- /header -->
