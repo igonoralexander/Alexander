@@ -22,6 +22,16 @@ Route::get('/', function () {
     return view('frontend.index', compact('seometa'));
 });
 
+Route::get('/blog', function () {
+    return view('frontend.blog.index', [
+        'title' => 'Articles and Updates',
+        'breadcrumbs' => [
+            ['url' => '#', 'label' => 'My Articles'],
+        ],   
+    ]);
+});
+
+
 // Route::get('/', [ProjectsController::class, 'index']);
 
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');

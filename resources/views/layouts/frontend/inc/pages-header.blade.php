@@ -1,5 +1,5 @@
 <!-- header -->
-<header id="header" class="header-default header-absolute">
+<header id="header" class="header-default">
     <div class="px_15 lg-px_40">
         <div class="row wrapper-header align-items-center">
                 <div class="col-md-4 col-3 tf-lg-hidden">

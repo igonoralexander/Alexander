@@ -14,11 +14,11 @@
                 <div class="toolbar-icon">
                     <i class="icon-account"></i>
                 </div>
-                <div class="toolbar-label">About Me</div>
+                <div class="toolbar-label">About</div>
             </a>
         </div>
         <div class="toolbar-item">
-            <a href="wishlist.html">
+            <a href="/portfolio">
                 <div class="toolbar-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
@@ -26,12 +26,14 @@
             </a>
         </div>
         <div class="toolbar-item">
-            <a href="/" data-bs-toggle="modal">
+            <a href="/contact">
                 <div class="toolbar-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="toolbar-label">Contact</div>
             </a>
         </div>
+
+       
     </div>
     <!-- /toolbar-bottom -->

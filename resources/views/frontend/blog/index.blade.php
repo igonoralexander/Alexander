@@ -1,4 +1,4 @@
-@extends('layouts.frontend.blogs')
+@extends('layouts.frontend.pages')
 
 @section('style')
 	<style>
@@ -11,74 +11,59 @@
 
     @include('partials.breadcrumb')
 
-      <!--Sidebar Page Container-->
-      <div class="sidebar-page-container sidebar-left">
-        <div class="auto-container">
-            <div class="row clearfix">
+        <!-- blog-list -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-list-main">
 
-                <!--Content Side / Blog Detail-->
-                <div class="content-side col-lg-8 col-md-12 col-sm-12">
-                    <div class="blog-posts">
-
-                        @foreach($blogpage as $blog)
-                                <!--News Block Two-->
-                                <div class="news-block-two">
-                                    <div class="inner-box">
-                                        <div class="image-box">
-                                            <figure class="image">
-                                                <a href="{{ route('blog.details', $blog->slug) }}"><img src="{{ asset($blog->cover_image)}}" alt=""></a>
-                                            </figure>
-                                            <div class="date-box"><span>{{ $blog->created_at->format('d') }}</span> {{ $blog->created_at->format('M') }}</div>
+                        <div class="list-blog">
+                            @foreach($blogpage as $blog)
+                                <div class="blog-article-item style-row">
+                                    <div class="article-thumb">
+                                        <a href="blog-detail.html">
+                                            <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
+                                        </a>
+                                    </div>
+                                    <div class="article-content">
+                                        <div class="article-label">
+                                            <a href="blog-detail.html" class="tf-btn btn-sm radius-3 btn-fill animate-hover-btn">Tech</a>
                                         </div>
-                                        <div class="lower-box">
-                                            <h2><a href="{{ route('blog.details', $blog->slug) }}">{{ $blog->title }} </a></h2>
-                                            <div class="text">{{ Str::limit(html_entity_decode(strip_tags($blog->content)), 350) }}</div>
-                                            <div class="bottom-box clearfix">
-                                                <div class="post-meta">
-                                                    <ul class="clearfix">
-                                                        <li><a href="#"><span class="far fa-user"></span> By {{ $blog->admin->full_name }}</a></li>
-                                                        <li><a href="#"><span class="far fa-comment"></span> Comments 845</a></li>
-                                                        <li><a href="#"><span class="far fa-heart"></span> Likes 1.6k</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="link-box">
-                                                    <a href="{{ route('blog.details', $blog->slug) }}" class="theme-btn btn-style-two"><span class="btn-title">Read more</span></a>
-                                                </div>
-                                            </div>
+                                        <div class="article-title">
+                                            <a href="blog-detail.html" class=""><strong>{{ $blog->title }} </strong></a>
+                                        </div>
+                                        <div class="desc">{{ Str::limit(html_entity_decode(strip_tags($blog->content)), 150) }} </div>
+                                        <div class="article-btn">
+                                            <a href="blog-detail.html" class="tf-btn btn-line fw-6">Read more<i class="icon icon-arrow1-top-left"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                        @endforeach
-
-
-                        <!--News Block Three-->
-                        <div class="news-block-three">
-                            <div class="inner-box">
-                                <div class="text">Since vindictively over agile the some far well besides constructively with close excellent grabbed gosh contrary far dalmatian upheld intre more some apart dear boa much cast falcon.</div>
-                                <div class="author">Sande Well</div>
-                            </div>
+                            @endforeach
+                            
+                            <ul class="wg-pagination">
+                                <li class="active">
+                                    <div class="pagination-item">1</div>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item animate-hover-btn">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item animate-hover-btn">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item animate-hover-btn"><i class="icon-arrow-right"></i></a>
+                                </li>
+                            </ul>
                         </div>
-
+                        
                     </div>
-
-                    <div class="pagination-box">
-                        <ul class="styled-pagination">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><span class="fa fa-arrow-right"></span></a></li>
-                        </ul>
-                    </div>
-
                 </div>
-                <!--End Content Side-->
-
-                @include('partials.blog-sidebar')
             </div>
         </div>
-    </div>
-    <!-- End Sidebar Page Container -->
 
-    @include('layouts.frontend.inc.newsletter-cta')
+        <div class="btn-sidebar-mobile">
+            <button data-bs-toggle="offcanvas" data-bs-target="#sidebarmobile" aria-controls="offcanvasRight"><i class="icon-open"></i></button>
+        </div>
+        <!-- /blog-list -->
 
 @endsection

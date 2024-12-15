@@ -1,4 +1,4 @@
-@extends('layouts.frontend.frontend')
+@extends('layouts.frontend.pages')
 
 @section('style')
 	<style>
@@ -7,19 +7,18 @@
 @endsection
 
 @section('content')
-        <!-- page-title -->
-        <div class="tf-page-title style-2">
-            <div class="container-full">
-                <div class="heading text-center">Contact Me</div>
-            </div>
-        </div>
-        <!-- /page-title -->
+        
+        @include('partials.breadcrumb')
+        
         <!-- form -->
         <section class="flat-spacing-21">
             <div class="container">
                 <div class="tf-grid-layout gap30 lg-col-2">
                     <div class="tf-content-left">
-                        <h5 class="mb_20">Contact Me</h5>
+                        <div class="mb_36">
+                            <p class="mb_15"><strong>My Availability</strong></p>
+                            <p class="mb_15">I am available for consultations and collaborations daily from 9 AM to 7 PM.</p>
+                        </div>
                         <div class="mb_20">
                             <p class="mb_15"><strong>Phone</strong></p>
                             <p>{{ $contact->phone }}</p>
@@ -28,10 +27,7 @@
                             <p class="mb_15"><strong>Email</strong></p>
                             <p>{{ $contact->email }}</p>
                         </div>
-                        <div class="mb_36">
-                            <p class="mb_15"><strong>My Availability</strong></p>
-                            <p class="mb_15">I am available for consultations and collaborations daily from 9 AM to 7 PM.</p>
-                        </div>
+                        
                         <div>
                             <ul class="tf-social-icon d-flex gap-20 style-default">
                                 <li><a href="{{ $contact->linkedin }}" target="_blank" class="box-icon link round social-linkedin border-line-black"><i class="fab fa-linkedin fs-14"></i></a></li>
@@ -43,7 +39,7 @@
                         <h5 class="mb_20">{{ $contact->title }}</h5>
                         <p class="mb_24">{{ $contact->description }}</p>
                         <div>
-                            <form class="form-contact" id="contactform" action="{{ route('send.email') }}" method="post">
+                            <form class="form-contact" action="{{ route('send.email') }}" method="post">
                                 @csrf
                                 @if (session()->has('message'))
                                     <div class="alert alert-success">
