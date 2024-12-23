@@ -22,20 +22,15 @@
                                         <a href="/" class="item-link">Home</i></a>
                                     </li>
                                 
-                                
                                     <li class="menu-item position-relative">
-                                        <a href="#" class="item-link">Pages<i class="icon icon-arrow-down"></i></a>
-                                        <div class="sub-menu submenu-default">
-                                            <ul class="menu-list">
-                                                <li>
-                                                    <a href="about-us.html" class="menu-link-text link text_black-2">About me</a>
-                                                </li>
-                                                <li><a href="view-cart.html" class="menu-link-text link text_black-2 position-relative">Services</a></li>
-                                                <li><a href="checkout.html" class="menu-link-text link text_black-2 position-relative">Check out</a></li>
-
-                                            </ul>
-                                        </div>
+                                        <a href="/about" class="item-link">About</a>
                                     </li>
+
+
+                                    <li class="menu-item position-relative">
+                                        <a href="/services" class="item-link">Services</a>
+                                    </li>
+
 
                                     <li class="menu-item position-relative">
                                         <a href="/blog" class="item-link">Aritcles</a>
@@ -52,6 +47,7 @@
                         <div class="col-xl-3 col-md-4 col-3">
                             <ul class="nav-icon d-flex justify-content-end align-items-center gap-20">
                                 <li class="nav-account"><a href="#login" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
+                                <li class="nav-account"><a href="#login" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li> 
                             </ul>
                         </div>
             </div>

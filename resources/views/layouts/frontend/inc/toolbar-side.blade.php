@@ -17,31 +17,31 @@
 
                     
                     <li class="nav-mb-item">
-                        <a href="/about" class="tf-category-link mb-menu-link">
+                        <a href="/servies" class="tf-category-link mb-menu-link">
                             <span>Services</span>
                         </a>
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/about" class="tf-category-link mb-menu-link">
+                        <a href="/portfolio" class="tf-category-link mb-menu-link">
                             <span>Portfolio/Projects</span>
                         </a>
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/about" class="tf-category-link mb-menu-link">
+                        <a href="/blog" class="tf-category-link mb-menu-link">
                             <span>My Articles</span>
                         </a>
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/about" class="tf-category-link mb-menu-link">
+                        <a href="/contact" class="tf-category-link mb-menu-link">
                             <span>Contact Me</span>
                         </a>
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/about" class="tf-category-link mb-menu-link">
+                        <a href="/faq" class="tf-category-link mb-menu-link">
                             <span>FAQs</span>
                         </a>
                     </li>

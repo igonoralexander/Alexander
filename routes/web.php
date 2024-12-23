@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,19 @@ Route::get('/', function () {
     return view('frontend.index', compact('seometa'));
 });
 
+Route::get('/faq', function () {
+    
+    $seometa = SeoMeta::where('page_name', 'FAQ')->first();
+    return view('frontend.pages.faq', [
+        
+        'seometa' => $seometa,
+        'title' => 'What do you need help with?',
+        'breadcrumbs' => [
+            ['url' => null, 'label' => 'FAQs'],
+        ],   
+    ]);
+});
+
 Route::get('/blog', function () {
     return view('frontend.blog.index', [
         'title' => 'Articles and Updates',
@@ -31,6 +45,7 @@ Route::get('/blog', function () {
     ]);
 });
 
+Route::get('/about', [AboutUsPageController::class, 'index'])->name('about');
 
 // Route::get('/', [ProjectsController::class, 'index']);
 

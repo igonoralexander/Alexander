@@ -265,7 +265,7 @@ li {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
 }
 
 .container {
@@ -1552,6 +1552,113 @@ label {
 /*** 
 
 ====================================================================
+	About Section Three
+====================================================================
+
+***/
+
+.about-section-three{
+	position:relative;
+	padding:110px 0px 70px;
+	border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.about-section-three .icon-one{
+	position: absolute;
+	left: 35%;
+	top: 120px;
+	line-height: 1em;
+	font-size: 48px;
+	color: #010101;
+	opacity: 0.10;
+}
+
+.about-section-three .icon-two{
+	position: absolute;
+	left: 0px;
+	top: 30%;
+	line-height: 1em;
+	font-size: 120px;
+	color: #4cc7d6;
+	opacity: 0.10;
+}
+
+.about-section-three .icon-four{
+	position: absolute;
+	left: 8%;
+	bottom: 10%;
+	line-height: 1em;
+	font-size: 100px;
+	color: #dc4549;
+	opacity: 0.10;
+}
+
+.about-section-three .icon-five{
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	line-height: 1em;
+	font-size: 70px;
+	color: #010101;
+	opacity: 0.10;
+}
+
+.about-section-three .icon-six{
+	position: absolute;
+	right: 5%;
+	top: 80%;
+	line-height: 1em;
+	font-size: 120px;
+	color: #dc4549;
+	opacity: 0.10;
+}
+
+.about-section-three .text-column{
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.about-section-three .text-column .inner{
+	position: relative;
+	display: block;
+	padding-top: 10px;
+}
+
+.about-section-three .text-column .sec-title{
+	margin-bottom:30px;	
+}
+
+.about-section-three .text-column .lower-text{
+	position: relative;
+	line-height: 1.6em;
+	max-width: 620px;
+}
+
+.about-section-three .image-column{
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.about-section-three .image-column .image,
+.about-section-three .image-column figure{
+	position: relative;
+	display: block;
+	margin: 0;
+}
+
+.about-section-three .image-column img{
+	position: relative;
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+
+
+/*** 
+
+====================================================================
 	Causes Section
 ====================================================================
 
@@ -2008,7 +2115,7 @@ label {
 .sec-title h2{
 	position: relative;
 	display: block;
-	font-size:35px;
+	font-size:25px;
 	line-height: 1.2em;
 	color: #dc4549;
 	font-weight: 600;
@@ -12627,7 +12734,7 @@ blockquote .text {
 .flat-title .sub-title {
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
+  text-align: justify;
 }
 .flat-title.mb_1 {
   margin-bottom: 30px;

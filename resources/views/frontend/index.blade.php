@@ -50,38 +50,6 @@
         </section>
         <!-- /Countdown -->
 
-        <!-- Technology Stack -->
-        <section class="flat-spacing-5 pb_0">
-            <div class="container">
-                <div class="sec-title">
-                    <h2>Technology stacks used</h2>
-                    <!-- <div class="text">We believe what we achieve</div> -->
-                </div>
-
-                <div class="hover-sw-nav">
-                    <div dir="ltr" class="swiper tf-sw-collection" data-preview="4" data-tablet="2" data-mobile="2" data-space-lg="30" data-space-md="30" data-space="15" data-loop="false" data-auto-play="false">
-                        <div class="swiper-wrapper">
-                            @foreach ($techstacks as $item)
-                                <div class="swiper-slide" lazy="true">
-                                    <div class="collection-item style-2 hover-img">
-                                        <div class="collection-inner">
-                                            <a href="shop-collection-sub.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name}}" style="width: 100px; height: auto;">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                            
-                        </div>
-                    </div>
-                    <div class="nav-sw nav-next-slider nav-next-collection box-icon w_46 round"><span class="icon icon-arrow-left"></span></div>
-                    <div class="nav-sw nav-prev-slider nav-prev-collection box-icon w_46 round"><span class="icon icon-arrow-right"></span></div>
-                </div>
-            </div>
-        </section>
-        <!-- /Technology stacks -->
-
          <!--Services Section-->
          <section class="featured-section">
             <div class="container">
@@ -113,6 +81,39 @@
 
             </div>
         </section>
+
+        
+        <!-- Technology Stack -->
+        <section class="flat-spacing-5 pb_0">
+            <div class="container">
+                <div class="sec-title" style="margin-bottom: 50px;">
+                    <h2>Technical Expertise</h2>
+                    <!-- <div class="text">We believe what we achieve</div> -->
+                </div>
+
+                <div class="hover-sw-nav">
+                    <div dir="ltr" class="swiper tf-sw-collection" data-preview="4" data-tablet="2" data-mobile="2" data-space-lg="30" data-space-md="30" data-space="15" data-loop="false" data-auto-play="false">
+                        <div class="swiper-wrapper">
+                            @foreach ($techstacks as $item)
+                                <div class="swiper-slide" lazy="true">
+                                    <div class="collection-item style-2 hover-img">
+                                        <div class="collection-inner">
+                                            <a href="shop-collection-sub.html" class="collection-image img-style">
+                                                <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name}}" style="width: 100px; height: auto;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            
+                        </div>
+                    </div>
+                    <div class="nav-sw nav-next-slider nav-next-collection box-icon w_46 round"><span class="icon icon-arrow-left"></span></div>
+                    <div class="nav-sw nav-prev-slider nav-prev-collection box-icon w_46 round"><span class="icon icon-arrow-right"></span></div>
+                </div>
+            </div>
+        </section>
+        <!-- /Technology stacks -->
 
         <!--Projects Section-->
         <section class="causes-section alternate">
@@ -183,8 +184,9 @@
         <!-- Blogs post -->
         <section class="flat-spacing-14 pb-0">
             <div class="container">
-                <div class="flat-title wow fadeInUp" data-wow-delay="0s">
-                    <span class="title"> <strong> Articles </strong> </span>
+                <div class="sec-title centered">
+                    <h2>Articles</h2>
+                    <!-- <div class="text">We believe what we achieve</div> -->
                 </div>
                 <div class="hover-sw-nav view-default hover-sw-3">
                     <div dir="ltr" class="swiper tf-sw-recent" data-preview="3" data-tablet="2" data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1" data-pagination-lg="1">

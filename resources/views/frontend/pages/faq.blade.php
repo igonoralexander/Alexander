@@ -10,38 +10,36 @@
 
     @include('partials.breadcrumb')
 
-    <!--FAQs Section-->
-    <section class="faq-section">
-        <div class="auto-container">
-                        
-            <div class="row clearfix">
-            
-                <!--FAQ Column -->
-                <div class="faq-column col-lg-6 col-md-12 col-sm-12">
-                    @if(isset ($faq[0]))
-                        @foreach ($faq[0] as $item) 
-                            <div class="faq-block">
-                                <h3>{{$item->question}}</h3>
-                                <div class="text">{{$item->answer}}</div>
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
 
-                <!--FAQ Column -->
-                <div class="faq-column col-lg-6 col-md-12 col-sm-12">
-                    @if(isset ($faq[1]))
-                        @foreach ($faq[1] as $item) 
-                            <div class="faq-block">
-                                <h3>{{$item->question}}</h3>
-                                <div class="text">{{$item->answer}}</div>
-                            </div>
-                        @endforeach
-                    @endif 
+        <!-- FAQ -->
+        <section class="flat-spacing-11">
+            <div class="container">
+                <div class="tf-accordion-wrap d-flex justify-content-between">
+                    <div class="content">
+                        <h5 class="mb_24">Frequently Ask Questions</h5>
+                        <div class="flat-accordion style-default has-btns-arrow mb_60">
+                            @foreach ($faq as $item)
+                                <div class="flat-toggle">
+                                    <div class="toggle-title"> {{$item->question}}</div>
+                                    <div class="toggle-content">
+                                        <p>{{$item->answer}}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+                    </div>
+                    <div class="box tf-other-content radius-10 bg_grey-8">
+                        <h5 class="mb_20">Have a question</h5>
+                        <p class="text_black-2 mb_40">If you have an issue or question that requires immediate assistance, you can click the button below to leave a message or chat live with us.</p>
+                        <div class="d-flex gap-20 align-items-center">
+                            <a href="/contact" class="tf-btn radius-3 btn-fill animate-hover-btn justify-content-center">Contact us</a>
+                            <a href="contact-2.html" class="tf-btn btn-line">Live chat<i class="icon icon-arrow1-top-left"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            @include('layouts.frontend.inc.newsletter-cta')
-        </div>
-    </section>
+        </section>
+        <!-- /FAQ -->
 
 @endsection

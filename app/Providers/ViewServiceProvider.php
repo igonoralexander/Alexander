@@ -66,7 +66,7 @@ class ViewServiceProvider extends ServiceProvider
                 'parallaxsection' => ParallaxSection::first(),
                 'about' => AboutUs::first(),
                 'howweworkpage' => HowWeWorkPage::first(),
-                'faq' => FAQ::all()->chunk(10),
+                'faq' => FAQ::all(),
                 'mainslider' => MainSlider::all(),
                 'industrs' => Industry::all(),
                 'industrys' => Industry::orderBy('id', 'asc')->take(6)->get(),
