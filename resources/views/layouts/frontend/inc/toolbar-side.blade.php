@@ -2,7 +2,7 @@
     <div class="offcanvas offcanvas-start canvas-mb toolbar-shop-mobile" id="toolbarShopmb">
         <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
         <div class="mb-canvas-content">
-            <div class="mb-body">
+            <div class="mb-body global-reset">
                 <ul class="nav-ul-mb" id="wrapper-menu-navigation">
                     <li class="nav-mb-item">
                         <a href="/" class="tf-category-link mb-menu-link">

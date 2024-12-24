@@ -68,6 +68,7 @@
                 selector: '#content-editor',
                 plugins: 'link image code lists',
                 toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | code',
+                valid_elements: 'p,h1,h2,h3,h4,h5,h6,ul,ol,li,a[href|target],img[src|alt]',
                 setup: function(editor) {
                     // Before form submission, copy TinyMCE content to the hidden input
                     editor.on('change', function () {

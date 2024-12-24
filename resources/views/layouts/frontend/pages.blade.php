@@ -42,8 +42,6 @@
     </div>
     <!-- /preload -->
     <div id="wrapper">
-        
-        @include('layouts.frontend.inc.announcement')
 
         @include('layouts.frontend.inc.pages-header')
 

@@ -34,6 +34,15 @@
             </a>
         </div>
 
+        <div class="toolbar-item">
+            <a href="https://wa.me/+2347069198779?text=Hello%20Alexander" target="_blank" aria-label="Chat with us on WhatsApp">
+                <div class="toolbar-icon">
+                    <i class="fab fa-whatsapp fs-150"></i>
+                </div>
+                <div class="toolbar-label">Chat</div>
+            </a>
+        </div>
+
        
     </div>
     <!-- /toolbar-bottom -->

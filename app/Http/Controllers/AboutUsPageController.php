@@ -33,9 +33,8 @@ class AboutUsPageController extends Controller
             
             'seometa' => $seometa,
             'about' => $about,
-            'title' => 'Who We Are?',
+            'title' => 'About Me',
             'breadcrumbs' => [
-                ['url' => '#', 'label' => 'Company'],
                 ['url' => null, 'label' => 'About'],
             ],
         ]);

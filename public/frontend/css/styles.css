@@ -256,8 +256,8 @@ img {
   padding-right: 15px;
 }
 
-ul,
-li {
+.global-reset ul,
+.global-reset li {
   list-style-type: none;
   margin-bottom: 0;
   padding-left: 0;
@@ -405,12 +405,7 @@ textarea {
   font-family: "Poppins", serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", sans-serif;
   text-rendering: optimizeLegibility;
   color: var(--main);
@@ -423,27 +418,27 @@ h1 {
 }
 
 h2 {
-  font-size: 68px;
-  line-height: 81.6px;
+  font-size: 25px;
+  line-height: 30.0px;
 }
 
 h3 {
-  font-size: 56px;
-  line-height: 67.2px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 h4 {
-  font-size: 42px;
+  font-size: 20px;
   line-height: 50.4px;
 }
 
 h5 {
-  font-size: 28px;
+  font-size: 18px;
   line-height: 33.6px;
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 30px;
 }
 
@@ -1559,7 +1554,7 @@ label {
 
 .about-section-three{
 	position:relative;
-	padding:110px 0px 70px;
+	padding:60px 0px;
 	border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
@@ -1613,25 +1608,91 @@ label {
 	opacity: 0.10;
 }
 
-.about-section-three .text-column{
-	position: relative;
-	margin-bottom: 40px;
+/* General Styling for About Section */
+
+.about-section-three .text-column {
+  position: relative;
+  margin-bottom: 40px;
 }
 
-.about-section-three .text-column .inner{
-	position: relative;
-	display: block;
-	padding-top: 10px;
+.about-section-three .text-column .inner {
+  position: relative;
+  display: block;
+  padding-top: 10px;
 }
 
-.about-section-three .text-column .sec-title{
-	margin-bottom:30px;	
+.about-section-three .text-column .sec-title {
+  margin-bottom: 30px;
 }
 
-.about-section-three .text-column .lower-text{
-	position: relative;
-	line-height: 1.6em;
-	max-width: 620px;
+.about-section-three .text {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 2;
+  color: black;
+  overflow-wrap: break-word; /* Ensures text wraps neatly */
+}
+
+.about-section-three .text p {
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+/* General Styling for Lists in the About Section */
+.about-section-three .text ul,
+.about-section-three .text ol {
+    padding-left: 20px; /* Adds indentation for bullets/numbers */
+    margin-bottom: 20px; /* Spacing below lists */
+    list-style-type: disc; /* Default bullet for unordered lists */
+}
+
+/* Customizing Ordered List Style */
+.about-section-three .text ol {
+    list-style-type: decimal; /* Default numbers for ordered lists */
+}
+
+/* Styling List Items */
+.about-section-three .text ul li,
+.about-section-three .text ol li {
+    font-size: inherit; /* Retains the font size from the parent */
+    line-height: inherit; /* Ensures consistent line-height */
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Optional: Customize Bullet Style for Specific Lists */
+.about-section-three .text ul {
+    list-style-type: circle; /* Change bullet style to circles */
+}
+
+
+/* Styling for Images */
+.about-section-three .text img {
+  max-width: 100%; /* Responsive images */
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Headers inside dynamically loaded content */
+.about-section-three .text h1,
+.about-section-three .text h2,
+.about-section-three .text h3,
+.about-section-three .text h4,
+.about-section-three .text h5,
+.about-section-three .text h6 {
+  font-family: Arial, sans-serif;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+/* Links */
+.about-section-three .text a {
+  color: #007bff; /* Default link color */
+  text-decoration: none;
+}
+
+.about-section-three .text a:hover {
+  text-decoration: underline;
 }
 
 .about-section-three .image-column{
@@ -2023,6 +2084,32 @@ label {
 	position:relative;
 	padding: 0px 0px;
 }
+
+
+.featured-section .image-layer{
+	position:absolute;
+	left:0;
+	top:170px;
+	bottom: 100px;
+	width:100%;
+	opacity:1;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.featured-section .image-layer:before{
+	content: '';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	padding:0px 0px;
+	background:#fbfaf5;
+	opacity:0.90;
+}
+
 
 .featured-section .featured-row{
 	position: relative;
@@ -3058,7 +3145,7 @@ header.header-bg {
   padding-bottom: 20px;
 }
 .footer .footer-wrap .footer-bottom .footer-bottom-wrap .footer-menu_item {
-  color: rgb(84, 84, 84);
+  color: #0c151a;
 }
 .footer.has-border-full .footer-body::before {
   left: 0;
@@ -7882,7 +7969,8 @@ header.header-bg {
   color: var(--white);
 }
 .tf-social-icon .social-line {
-  border: 1px solid var(--main);
+  border: 1px solid;
+  color: white;
 }
 .tf-social-icon .social-line.social-facebook:hover {
   background: transparent;
@@ -18927,7 +19015,7 @@ blockquote .text {
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 25px;
     line-height: 38.4px;
   }
 

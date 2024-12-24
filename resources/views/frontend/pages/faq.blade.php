@@ -34,7 +34,7 @@
                         <p class="text_black-2 mb_40">If you have an issue or question that requires immediate assistance, you can click the button below to leave a message or chat live with us.</p>
                         <div class="d-flex gap-20 align-items-center">
                             <a href="/contact" class="tf-btn radius-3 btn-fill animate-hover-btn justify-content-center">Contact us</a>
-                            <a href="contact-2.html" class="tf-btn btn-line">Live chat<i class="icon icon-arrow1-top-left"></i></a>
+                            <a href="https://wa.me/+2347069198779?text=Hello%20Alexander" target="_blank" aria-label="Chat with us on WhatsApp" class="tf-btn btn-line">Live chat<i class="icon icon-arrow1-top-left"></i></a>
                         </div>
                     </div>
                 </div>

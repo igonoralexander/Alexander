@@ -81,7 +81,6 @@
 
             </div>
         </section>
-
         
         <!-- Technology Stack -->
         <section class="flat-spacing-5 pb_0">

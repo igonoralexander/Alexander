@@ -1,5 +1,5 @@
 <!-- page-title -->
-<div class="tf-page-title">
+<div class="tf-page-title global-reset">
     <div class="container-full">
         <div class="row">
             <div class="col-12">
@@ -26,3 +26,5 @@
             </div>
 </div>
 <!-- /page-title -->
+
+
