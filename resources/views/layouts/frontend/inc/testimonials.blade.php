@@ -1,30 +1,30 @@
-
-        <!--Testimonials Two Section-->
-        <section class="testimonials-two ">
-            <div class="auto-container">
-            
-                <div class="sec-title centered">
-                    <h2>What People Saying About Us!</h2>
+   <!-- Testimonial -->
+   <section class="flat-spacing-5 mt_20 flat-testimonial">
+            <div class="container">
+                <div class="sec-title">
+                    <h2>Happy Clients</h2>
+                    <div class="text">Hear what they say about us</div>
                 </div>
-                            
-                <div class="carousel-box">
-                    <div class="kausid-carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 50, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "800":{ "items" : "2" }, "1024":{ "items" : "2" }, "1200":{ "items" : "3" }}}'>
-                        @foreach ($testimonial as $item)
-                            <!--Testimonial Block Two-->
-                            <div class="testimonial-block-two">
-                                <div class="inner">
-                                    <div class="top-left-icon"><span class="flaticon-chat"></span></div>
-                                    <div class="text">{{$item->testimonial}}</div>
-                                    <div class="info">
-                                        <div class="icon"><span class="flaticon-straight-quotes"></span></div>
-                                        <div class="author">{{$item->name}}</div>
-                                        <div class="designation">{{$item->title}}</div>
+                <div class="wrap-carousel">
+                    <div dir="ltr" class="swiper tf-sw-testimonial" data-preview="3" data-tablet="2" data-mobile="1" data-space-lg="30" data-space-md="15">
+                        <div class="swiper-wrapper">
+                            @foreach ($testimonial as $item)
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item style-column wow fadeInUp" data-wow-delay="0s">
+                                        <div class="text">{{$item->testimonial}}</div>
+                                        <div class="author">
+                                            <div class="name">{{$item->name}}</div>
+                                            <div class="metas">{{$item->title}}</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
-                        
+                            @endforeach
+                        </div>
                     </div>
+                    <div class="nav-sw nav-next-slider nav-next-testimonial lg"><span class="icon icon-arrow-left"></span></div>
+                    <div class="nav-sw nav-prev-slider nav-prev-testimonial lg"><span class="icon icon-arrow-right"></span></div>
+                    <div class="sw-dots style-2 sw-pagination-testimonial justify-content-center"></div>
                 </div>
             </div>
         </section>
+        <!-- /Testimonial -->

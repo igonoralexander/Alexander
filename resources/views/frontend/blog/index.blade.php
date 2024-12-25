@@ -26,9 +26,6 @@
                                         </a>
                                     </div>
                                     <div class="article-content">
-                                        <div class="article-label">
-                                            <a href="blog-detail.html" class="tf-btn btn-sm radius-3 btn-fill animate-hover-btn">Tech</a>
-                                        </div>
                                         <div class="article-title">
                                             <a href="blog-detail.html" class=""><strong>{{ $blog->title }} </strong></a>
                                         </div>
@@ -40,7 +37,7 @@
                                 </div>
                             @endforeach
                             
-                            <ul class="wg-pagination">
+                            <ul class="wg-pagination global-reset">
                                 <li class="active">
                                     <div class="pagination-item">1</div>
                                 </li>

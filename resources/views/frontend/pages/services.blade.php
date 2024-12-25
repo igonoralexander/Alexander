@@ -13,10 +13,11 @@
 
     <!--Services Section-->
     <section class="featured-section" style="margin-top: 50px;">
-        <div class="auto-container">
+        <div class="container">
             <div class="featured-row">
                 <div class="sec-title centered">
-                    <h2>Transforming Ideas into Reality Through Innovative Solutions</h2>
+                    <h2>Service Offerings </h2>
+                    <div class="text" style="font-size: 14px;">I provide tailored digital solutions that drive growth, enhance efficiency, and deliver lasting value through innovation and user-centric design.</div>
                 </div>
                 <div class="row clearfix">
                     @foreach ($services as $item) 	
@@ -28,7 +29,7 @@
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="#">{{$item->title}}</a></h3>
-                                    <div class="text">{{$item->description}}</div>
+                                    <div class="text" style = "font-size: 14px;">{{$item->description}}</div>
                                 </div>
                             </div>
                         </div>
@@ -39,22 +40,6 @@
         </div>
     </section>
 
-    <!--Services Section-->
-    <section class="featured-section">
-        <div class="auto-container">
-            <div class="bottom-info" style = "margin-bottom: ;">
-                <div class="link-box" style="text-align: center;">
-                    <a href="/contact" class="btn-style-five">
-                        <span class="btn-title">Contact Us for more inquires </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    @include('layouts.frontend.inc.why-choose-us')
-
-    
-    @include('layouts.frontend.inc.careers-cta')
+    @include('layouts.frontend.inc.contactus-cta')
 
 @endsection

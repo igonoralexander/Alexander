@@ -1,11 +1,11 @@
  <!-- toolbar-bottom -->
  <div class="tf-toolbar-bottom type-1150">
         <div class="toolbar-item">
-            <a href="#toolbarShopmb" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft">
+            <a href="/" aria-controls="offcanvasLeft">
                 <div class="toolbar-icon">
                     <i class="icon-shop"></i>
                 </div>
-                <div class="toolbar-label">Menu</div>
+                <div class="toolbar-label">Home</div>
             </a>
         </div>
         
@@ -22,7 +22,7 @@
                 <div class="toolbar-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
-                <div class="toolbar-label">Portfolio</div>
+                <div class="toolbar-label">Projects</div>
             </a>
         </div>
         <div class="toolbar-item">

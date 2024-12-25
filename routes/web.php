@@ -17,6 +17,8 @@ use App\Http\Controllers\FileController;
 */
 
 use App\Models\SeoMeta;
+use App\Models\ProjectCategory;
+use App\Models\Project;
 
 Route::get('/', function () {
     $seometa = SeoMeta::where('page_name', 'Home')->first();
@@ -35,6 +37,38 @@ Route::get('/faq', function () {
         ],   
     ]);
 });
+
+Route::get('/services', function () {
+
+    $seometa = SeoMeta::where('page_name', 'Services')->first();
+    return view('frontend.pages.services', [
+        
+        'seometa' => $seometa,  // Pass the SEO meta data
+        'title' => 'What I DO?',
+        'breadcrumbs' => [
+            ['url' => null, 'label' => 'Services'],
+        ],   
+    ]);
+});
+
+Route::get('/portfolio', function () {
+
+    $seometa = SeoMeta::where('page_name', 'Projects')->first();
+    $categories = ProjectCategory::all();
+    $allprojects = Project::with('projectcategory')->get();
+
+    return view('frontend.pages.projects', [    
+        'seometa' => $seometa,
+        'categories' => $categories,
+        'allprojects' => $allprojects,
+
+        'title' => 'What I Have Done?',
+        'breadcrumbs' => [
+            ['url' => null, 'label' => 'My Projects'],
+        ],   
+    ]);
+});
+
 
 Route::get('/blog', function () {
     return view('frontend.blog.index', [

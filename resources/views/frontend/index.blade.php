@@ -8,16 +8,17 @@
 
 @section('content')
         <!-- Slider -->
-        <div class="tf-slideshow slider-effect-fade position-relative"> 
-            <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="true" data-auto-play="false" data-delay="0" data-speed="1000">
-                <div class="swiper-wrapper">
+        <div class="tf-slideshow slider-home-2 slider-effect-fade position-relative"> 
+            <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="true" data-auto-play="true" data-delay="2000" data-speed="5000">
+            
+                <div class="swiper-wrapper" lazy="true">
                     @foreach ($mainslider as $item)
                         <div class="swiper-slide">
                             <div class="wrap-slider">
-                                <img src="{{ asset($item->image) }}" alt="{{ $item->title }}">
+                                <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->title }}">
                                 <div class="box-content">
                                     <div class="container">
-                                        <h3 class="fade-item fade-item-1">{{ $item->title }}</h3>
+                                        <h1 class="fade-item fade-item-1" style="font-size: 34px; font-family: Playfair Display; font-weight: 700;">{!! $item->title !!}</h1>
                                         <!-- <p class="fade-item fade-item-2">{{ $item->description }}</p> -->
                                         <a href="{{ $item->link }}" class="fade-item fade-item-3 tf-btn btn-fill animate-hover-btn btn-xl radius-3"><span>{{ $item->button_title }}</span><i class="icon icon-arrow-right"></i></a>
                                     </div>
@@ -42,7 +43,7 @@
                 <div class="tf-grid-layout md-col-2 align-items-center flat-wrap-countdown countdown-black">
                     <div class="tf-content-wrap-v2 wow fadeInUp" data-wow-delay="0s">
                         <h4 class="heading" style = "color:black;"> <strong> {{ $aboutsection->big_title }} </strong></h4>
-                        <p class="description" style = "color:black; text-align: justify;">{!! nl2br(e($aboutsection->description)) !!}</p>
+                        <p class="description" style = "color:black; font-size: 14px; text-align: justify;">{!! nl2br(e($aboutsection->description)) !!}</p>
                         <a href="/about" style = "color:black;" class="tf-btn btn-line">Discover More<i class="icon icon-arrow-right"></i></a>
                     </div>
                 </div>
@@ -72,13 +73,7 @@
                                 </div>
                             </div>
                         @endforeach
-
-                        <div class="tf-pagination-wrap view-more-button text-center">
-                            <button class="tf-btn-loading tf-loading-default style-2 btn-loadmore "><span class="text">Load more</span></button>
-                        </div>
-
                     </div>
-
             </div>
         </section>
         
@@ -141,51 +136,42 @@
                     @endforeach
 
                 </div>
-
-                <div class="tf-pagination-wrap view-more-button text-center">
-                    <button class="tf-btn-loading tf-loading-default style-2 btn-loadmore "><span class="text">Load more</span></button>
-                </div>
                 
             </div>
         </section>
 
-        <!-- Testimonial -->
-        <section class="flat-spacing-5 mt_20 flat-testimonial">
+        @include('layouts.frontend.inc.contactus-cta')
+
+        @include('layouts.frontend.inc.testimonials')
+
+         <!-- Clients -->
+         <section class="flat-spacing-7">
             <div class="container">
-                <div class="sec-title">
-                    <h2>Happy Clients</h2>
-                    <div class="text">Hear what they say about us</div>
-                </div>
-                <div class="wrap-carousel">
-                    <div dir="ltr" class="swiper tf-sw-testimonial" data-preview="3" data-tablet="2" data-mobile="1" data-space-lg="30" data-space-md="15">
+                <div class="wrap-carousel wrap-shop-gram">
+                    <div dir="ltr" class="swiper tf-sw-shop-gallery" data-preview="5" data-tablet="3" data-mobile="2" data-space-lg="7" data-space-md="7">
                         <div class="swiper-wrapper">
-                            @foreach ($testimonial as $item)
+                            @foreach ($clients as $item)
                                 <div class="swiper-slide">
-                                    <div class="testimonial-item style-column wow fadeInUp" data-wow-delay="0s">
-                                        <div class="text">{{$item->testimonial}}</div>
-                                        <div class="author">
-                                            <div class="name">{{$item->name}}</div>
-                                            <div class="metas">{{$item->title}}</div>
+                                    <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
+                                        <div class="img-style">
+                                            <img class="lazyload img-hover" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="Logo of {{$item->name}}" style = "width: 100px; height: auto;">
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                     </div>
-                    <div class="nav-sw nav-next-slider nav-next-testimonial lg"><span class="icon icon-arrow-left"></span></div>
-                    <div class="nav-sw nav-prev-slider nav-prev-testimonial lg"><span class="icon icon-arrow-right"></span></div>
-                    <div class="sw-dots style-2 sw-pagination-testimonial justify-content-center"></div>
+                    <div class="sw-dots sw-pagination-gallery justify-content-center"></div>
                 </div>
             </div>
         </section>
-        <!-- /Testimonial -->
+        <!-- /Clients -->
 
         <!-- Blogs post -->
         <section class="flat-spacing-14 pb-0">
             <div class="container">
                 <div class="sec-title centered">
                     <h2>Articles</h2>
-                    <!-- <div class="text">We believe what we achieve</div> -->
                 </div>
                 <div class="hover-sw-nav view-default hover-sw-3">
                     <div dir="ltr" class="swiper tf-sw-recent" data-preview="3" data-tablet="2" data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1" data-pagination-lg="1">
@@ -219,5 +205,7 @@
             </div>
         </section>
         <!-- /Blogs post -->
+
+       
 
 @endsection

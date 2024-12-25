@@ -1,5 +1,5 @@
         <!-- footer -->
-        <footer id="footer" class="footer md-pb-70" style = "background: #001f3f; margin-top: 50px">
+        <footer id="footer" class="footer md-pb-70" style = "background: black; margin-top: 50px">
             <div class="footer-wrap">
                 <div class="footer-bottom">
                     <div class="container">

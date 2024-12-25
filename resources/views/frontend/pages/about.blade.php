@@ -31,8 +31,8 @@
     
     </section>
 
-     <!--Services Section-->
-     <section class="featured-section">
+    <!--Services Section-->
+        <section class="featured-section">
             <div class="container">
                     <div class="sec-title">
                         <h2>Technical Expertise</h2>
@@ -97,4 +97,6 @@
             </div>
         </section>
 
+        @include('layouts.frontend.inc.contactus-cta')
+        
 @endsection
