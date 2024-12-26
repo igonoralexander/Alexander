@@ -14,16 +14,15 @@
     <!--About Section-->
     <section class="about-section-three">
         <div class="container">
+            <div class="sec-title" style = "margin-top: 20px;">
+                <div class="text" style = "font-size: 15px;"><strong>10+ years of experience in software engineering, I create innovative, user-focused solutions, developing applications and platforms that drive success</strong></div>
+            </div>
             <div class="row clearfix">
                 <!--Text Column-->
-                <div class="text-column col-lg-7 col-md-12 col-sm-12">
+                <div class="text-column col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="text">{!! $about->who_we_are !!}</div></br>
                     </div>
-                </div>
-                <!--Image Column-->
-                <div class="image-column col-lg-5 col-md-12 col-sm-12">
-                    <figure class="image wow" data-wow-delay="0ms"><img src="{{ asset($about->featured_image)}}" alt="" /></figure>
                 </div>
             </div>
 
@@ -98,5 +97,21 @@
         </section>
 
         @include('layouts.frontend.inc.contactus-cta')
+
+
+        <!--Call to Action-->
+        <div class="container">
+            <div class="call-to-box" style="margin-bottom: 10px;">
+                <div class="inner">
+                    <div class="row clearfix">
+                        <div class="link-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="link-box">
+                                <a href="/contact" class="theme"><span class="btn-title">Download My CV</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
 @endsection

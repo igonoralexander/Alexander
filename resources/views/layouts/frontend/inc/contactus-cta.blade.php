@@ -5,9 +5,7 @@
             <div class="row clearfix">
                 <div class="title-column col-xl-9 col-lg-12 col-md-12 col-sm-12">
                     <h2 style = "font-family: Playfair Display; ">Ready to Bring Your Project to Life</h2>
-                    <div class="text">
-                        <strong>I deliver cutting-edge solutions, ensuring scalability. Whether you're looking to hire a skilled professional or need support with a unique project, I’m ready to deliver exceptional results.</strong>
-                    </div>
+                    <div class="text"> I deliver cutting-edge solutions, ensuring scalability. Whether you're looking to hire a skilled professional or need support with a unique project, I’m ready to deliver exceptional results.</div>
                 </div>
                 <div class="link-column col-xl-3 col-lg-12 col-md-12 col-sm-12">
                     <div class="link-box">

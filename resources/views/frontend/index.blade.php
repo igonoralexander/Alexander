@@ -44,7 +44,7 @@
                     <div class="tf-content-wrap-v2 wow fadeInUp" data-wow-delay="0s">
                         <h4 class="heading" style = "color:black;"> <strong> {{ $aboutsection->big_title }} </strong></h4>
                         <p class="description" style = "color:black; font-size: 14px; text-align: justify;">{!! nl2br(e($aboutsection->description)) !!}</p>
-                        <a href="/about" style = "color:black;" class="tf-btn btn-line">Discover More<i class="icon icon-arrow-right"></i></a>
+                        <a href="/about" style = "color:black;" class="tf-btn btn-line"><strong>Discover More About Me</strong><i class="icon icon-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -81,8 +81,7 @@
         <section class="flat-spacing-5 pb_0">
             <div class="container">
                 <div class="sec-title" style="margin-bottom: 50px;">
-                    <h2>Technical Expertise</h2>
-                    <!-- <div class="text">We believe what we achieve</div> -->
+                    <h2>Frameworks and Programming Languages Used</h2>
                 </div>
 
                 <div class="hover-sw-nav">
@@ -92,7 +91,7 @@
                                 <div class="swiper-slide" lazy="true">
                                     <div class="collection-item style-2 hover-img">
                                         <div class="collection-inner">
-                                            <a href="shop-collection-sub.html" class="collection-image img-style">
+                                            <a href="#" class="collection-image img-style">
                                                 <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name}}" style="width: 100px; height: auto;">
                                             </a>
                                         </div>
@@ -135,8 +134,17 @@
                         </div>
                     @endforeach
 
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center;">
+                        <a href="/projects" class="d-flex align-items-center gap-10">
+                            <strong>
+                                Explore More of My Work 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                    <path d="M1.07692 10L0 8.92308L7.38462 1.53846H0.769231V0H10V9.23077H8.46154V2.61538L1.07692 10Z" fill="currentColor"></path>
+                                </svg>
+                            </strong>
+                        </a>
+                    </div>
                 </div>
-                
             </div>
         </section>
 

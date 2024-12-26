@@ -18,7 +18,7 @@
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/portfolio" class="mb-menu-link">Portfolio/Project</a>
+                        <a href="/portfolio" class="mb-menu-link">Portfolio/Projects</a>
                     </li>
 
                     <li class="nav-mb-item">

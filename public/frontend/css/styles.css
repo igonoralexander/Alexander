@@ -1433,7 +1433,7 @@ label {
   gap: 15px;
 }
 .tf-grid-layout.tf-col-2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .tf-grid-layout.gap30 {
   gap: 30px;
@@ -2155,7 +2155,7 @@ label {
 
 .featured-block-two .inner-box h3{
 	text-transform: capitalize;
-	font-size:24px;
+	font-size:20px;
 	line-height:1.25em;
 	font-weight:700;
 	margin-bottom:15px;
@@ -2519,7 +2519,7 @@ label {
 .sec-title h2{
 	position: relative;
 	display: block;
-	font-size:25px;
+	font-size:30px;
 	line-height: 1.2em;
 	color: #dc4549;
 	font-weight: 700;
