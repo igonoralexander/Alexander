@@ -188,16 +188,16 @@
                                 <div class="swiper-slide" lazy="true">
                                     <div class="blog-article-item wow fadeInUp" data-wow-delay="0s">
                                         <div class="article-thumb h-460">
-                                            <a href="blog-detail.html">
+                                            <a href="{{ route('blog.details', $blog->slug) }}">
                                                 <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
                                             </a>
                                         </div>
                                         <div class="article-content">
                                             <div class="article-title">
-                                                <a href="blog-detail.html" class="">{{ $blog->title }}</a>
+                                                <a href="{{ route('blog.details', $blog->slug) }}" class="">{{ $blog->title }}</a>
                                             </div>
                                             <div class="article-btn">
-                                                <a href="blog-detail.html" class="tf-btn btn-line fw-6">Read more<i class="icon icon-arrow1-top-left"></i></a>
+                                                <a href="{{ route('blog.details', $blog->slug) }}" class="tf-btn btn-line fw-6">Read more<i class="icon icon-arrow1-top-left"></i></a>
                                             </div>
                                         </div>
                                     </div>

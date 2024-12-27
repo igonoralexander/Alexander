@@ -4,13 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Artisan;
 
 use App\Models\BlogCategory;
 use App\Models\BlogMedia;
 use App\Models\Admin;
 use App\Models\Tag;
-use App\Models\SubCategory;
 
 class BlogPost extends Model
 {
@@ -20,16 +18,6 @@ class BlogPost extends Model
         'title', 'slug', 'content', 'cover_image', 'category_id', 'admin_id', 'updated_at'
     ];
 
-    protected static function booted()
-    {
-        static::created(function ($blogpost) {
-            Artisan::call('sitemap:generate');
-        });
-
-        static::updated(function ($blogpost) {
-            Artisan::call('sitemap:generate');
-        });
-    }
     
     // Relationship with Category
     public function blogcategory()

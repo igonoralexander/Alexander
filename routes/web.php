@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\FileController;
@@ -78,6 +79,9 @@ Route::get('/blog', function () {
         ],   
     ]);
 });
+
+#blogDetail
+Route::get('/blog/{slug}', [FrontEndController::class, 'blogDetail'])->name('blog.details');
 
 Route::get('/about', [AboutUsPageController::class, 'index'])->name('about');
 

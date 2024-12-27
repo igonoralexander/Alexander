@@ -24,7 +24,6 @@ class BlogPostController extends Controller
 
     public function index()
     {
-        
         $blogposts = BlogPost::with(['admin', 'blogcategory'])->get();
         return view('backend.blog.index', compact('blogposts'));
     }

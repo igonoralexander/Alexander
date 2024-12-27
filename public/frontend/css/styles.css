@@ -1559,7 +1559,6 @@ label {
 
 .about-section-three{
 	position:relative;
-	padding:60px 0px;
 	border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
@@ -1662,11 +1661,6 @@ label {
     font-size: inherit; /* Retains the font size from the parent */
     line-height: inherit; /* Ensures consistent line-height */
     margin-bottom: 10px; /* Spacing between list items */
-}
-
-/* Optional: Customize Bullet Style for Specific Lists */
-.about-section-three .text ul {
-    list-style-type: circle; /* Change bullet style to circles */
 }
 
 
@@ -11610,7 +11604,36 @@ ul.tags-lists li a:hover {
 }
 .blog-detail .blog-detail-main .desc {
   margin-bottom: 30px;
+  line-height: 2;
+  color: black;
+  overflow-wrap: break-word; /* Ensures text wraps neatly */
 }
+
+.blog-detail .blog-detail-main .desc p {
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+/* General Styling for Lists in the About Section */
+.blog-detail .blog-detail-main .desc ul,
+.blog-detail .blog-detail-main .desc ol {
+    padding-left: 20px; /* Adds indentation for bullets/numbers */
+    margin-bottom: 20px; /* Spacing below lists */
+    list-style-type: disc; /* Default bullet for unordered lists */
+}
+
+/* Customizing Ordered List Style */
+.blog-detail .blog-detail-main .desc ol {
+    list-style-type: decimal; /* Default numbers for ordered lists */
+}
+
+/* Styling List Items */
+.blog-detail .blog-detail-main .desc ul li,
+.blog-detail .blog-detail-main .desc ol li {
+    font-size: inherit; /* Retains the font size from the parent */
+    line-height: inherit; /* Ensures consistent line-height */
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
 .blog-detail .blog-detail-main .bot {
   margin-bottom: 30px;
 }
