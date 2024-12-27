@@ -1,65 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+My Personal Portfolio Website
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Overview
 
-## About Laravel
+This repository contains the source code for my personal portfolio website. It showcases my skills, projects, services, and achievements as a software engineer, content writer, and product manager. The portfolio is built using HTML, CSS, JavaScript, and Laravel, with hosting on cPanel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Hero Section: Highlights key skills and provides clear call-to-action buttons.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+About Page: Details professional background, technical expertise, achievements, and fun facts.
 
-## Learning Laravel
+Portfolio/Projects Page: Displays detailed case studies of completed projects.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Services Page: Lists professional services offered with descriptions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Blog Page: Shares articles, tutorials, and industry insights.
 
-## Laravel Sponsors
+Contact Page: Includes a contact form, email, and social media links.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Testimonials Section: Features endorsements from clients and colleagues.
 
-### Premium Partners
+User Flow for Each Page
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1. Home Page
 
-## Contributing
+Flow:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Landing: Hero section with skills summary and call-to-action buttons ("View My Portfolio" and "Hire Me").
 
-## Code of Conduct
+Navigation: Easy access to About, Portfolio, Services, Blog, and Contact pages.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Highlights:
 
-## Security Vulnerabilities
+Key achievements.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Fun facts.
 
-## License
+Featured projects.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. About Page
+
+Flow:
+
+Introduction: Mission statement and professional tagline.
+
+Professional Background: Details on experience and expertise.
+
+Technical Expertise: Icons and descriptions of tools and technologies mastered.
+
+Achievements: Awards, recognitions, and milestones.
+
+Fun Facts: Lighthearted, engaging facts to personalize the page.
+
+Downloadable CV: Button to download a detailed resume.
+
+3. Portfolio/Projects Page
+
+Flow:
+
+Overview: Introduction to the projects section.
+
+Project Cards: Grid layout of featured projects with brief descriptions and links.
+
+Individual Project Details:
+
+Problem statement.
+
+Solution provided.
+
+Tools and technologies used.
+
+Results and impact.
+
+Testimonials (if available).
+
+4. Services Page
+
+Flow:
+
+Introduction: Brief overview of professional services offered.
+
+Services List: Icons, titles, and detailed descriptions for each service.
+
+Call-to-Action: Encouragement to reach out for collaboration.
+
+5. Blog Page
+
+Flow:
+
+Introduction: Overview of the blog section.
+
+Blog List: Titles, featured images, and short previews of articles.
+
+Individual Blog Posts:
+
+Main content.
+
+Embedded images or videos.
+
+Related posts suggestions.
+
+6. Contact Page
+
+Flow:
+
+Introduction: Encouragement to connect for opportunities.
+
+Contact Form: Fields for name, email, and message.
+
+Additional Info:
+
+Email address.
+
+Social media links.

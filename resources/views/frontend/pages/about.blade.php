@@ -11,26 +11,39 @@
 
 @include('partials.breadcrumb')
     
-    <!--About Section-->
-    <section class="about-section-three">
-        <div class="container">
-            <div class="sec-title" style = "margin-top: 20px;">
-                <div class="text" style = "font-size: 15px;"><strong>10+ years of experience in software engineering, I create innovative, user-focused solutions, developing applications and platforms that drive success</strong></div>
-            </div>
-            <div class="row clearfix">
-                <!--Text Column-->
-                <div class="text-column col-lg-12 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <div class="text">{!! $about->who_we_are !!}</div></br>
+        <!--About Section-->
+        <section class="about-section-three">
+            <div class="container">
+                <div class="sec-title" style = "margin-top: 20px;">
+                    <div class="text" style = "font-size: 15px;"><strong>10+ years of experience in software engineering, I create innovative, user-focused solutions, developing applications and platforms that drive success</strong></div>
+                </div>
+                <div class="row clearfix">
+                    <!--Text Column-->
+                    <div class="text-column col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="text">{!! $about->who_we_are !!}</div></br>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!--Call to Action-->
+        <div class="container">
+            <div class="call-to-box" style="margin-bottom: 50px;">
+                <div class="inner">
+                    <div class="row clearfix">
+                        <div class="link-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="link-box">
+                                <a href="https://drive.google.com/file/d/1rCmSwZW0DDKXS6bcU1VmYJfG5-YbanRF/view?usp=drive_link" target="_blank" class="theme"><span class="btn-title"> My Resume</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-    </section>
 
-    <!--Services Section-->
+        <!--Services Section-->
         <section class="featured-section">
             <div class="container">
                     <div class="sec-title">
@@ -98,20 +111,6 @@
 
         @include('layouts.frontend.inc.contactus-cta')
 
-
-        <!--Call to Action-->
-        <div class="container">
-            <div class="call-to-box" style="margin-bottom: 10px;">
-                <div class="inner">
-                    <div class="row clearfix">
-                        <div class="link-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <div class="link-box">
-                                <a href="/contact" class="theme"><span class="btn-title">Download My CV</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
 @endsection

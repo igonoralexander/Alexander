@@ -18,7 +18,7 @@
                                 <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->title }}">
                                 <div class="box-content">
                                     <div class="container">
-                                        <h1 class="fade-item fade-item-1" style="font-size: 34px; font-family: Playfair Display; font-weight: 700;">{!! $item->title !!}</h1>
+                                        <h1 class="fade-item fade-item-1" style="font-family: Playfair Display; font-weight: 700;">{!! $item->title !!}</h1>
                                         <!-- <p class="fade-item fade-item-2">{{ $item->description }}</p> -->
                                         <a href="{{ $item->link }}" class="fade-item fade-item-3 tf-btn btn-fill animate-hover-btn btn-xl radius-3"><span>{{ $item->button_title }}</span><i class="icon icon-arrow-right"></i></a>
                                     </div>

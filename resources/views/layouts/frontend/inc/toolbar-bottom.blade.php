@@ -3,7 +3,7 @@
         <div class="toolbar-item">
             <a href="/" aria-controls="offcanvasLeft">
                 <div class="toolbar-icon">
-                    <i class="icon-shop"></i>
+                <i class="fas fa-home"></i>
                 </div>
                 <div class="toolbar-label">Home</div>
             </a>
@@ -12,9 +12,9 @@
         <div class="toolbar-item">
             <a href="/about">
                 <div class="toolbar-icon">
-                    <i class="icon-account"></i>
+                    <i class="fas fa-info-circle"></i>
                 </div>
-                <div class="toolbar-label">About</div>
+                <div class="toolbar-label">About Me</div>
             </a>
         </div>
         <div class="toolbar-item">
@@ -37,7 +37,7 @@
         <div class="toolbar-item">
             <a href="https://wa.me/+2347069198779?text=Hello%20Alexander" target="_blank" aria-label="Chat with us on WhatsApp">
                 <div class="toolbar-icon">
-                    <i class="fab fa-whatsapp fs-150"></i>
+                    <i class="fab fa-whatsapp"></i>
                 </div>
                 <div class="toolbar-label">Chat</div>
             </a>

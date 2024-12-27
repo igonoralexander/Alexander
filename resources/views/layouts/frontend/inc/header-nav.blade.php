@@ -7,7 +7,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="col-xl-2 col-md-4 col-6 ">
+                        <div class="col-xl-3 col-md-4 col-6 ">
                             <a href="/" class="logo-header">
                                 <img src="{{ asset('storage/' . $logo) }}" alt="logo" class="logo">
                             </a>

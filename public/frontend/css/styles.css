@@ -419,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 80px;
-  line-height: 96px;
+  line-height: 90px;
 }
 
 h2 {
@@ -3767,7 +3767,7 @@ header.header-bg {
   color: var(--white);
 }
 .tf-toolbar-bottom .toolbar-item a .toolbar-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 12px;
 }
@@ -18849,7 +18849,7 @@ blockquote .text {
 
   h1 {
     font-size: 44px;
-    line-height: 52.8px;
+    line-height: 42.8px;
   }
 
   h2 {
