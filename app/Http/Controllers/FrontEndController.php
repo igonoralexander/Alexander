@@ -73,30 +73,23 @@ class FrontEndController extends Controller
 
     }
 
-    public function viewByCategory($slug)
+    public function projectDetail($slug)
     { 
 
-        if (Category::Where('slug', $slug)->exists())
-        {
+        $project = Project::where('slug', $slug)->firstOrFail();
 
-            $data = array();
+        $seometa = SeoMeta::where('page_name', 'Project')->first();
 
-            if (session::has('loginId'))
-            {
-                $data = RegisterUser::where('id', '=', session::get('loginId'))->first();
-            }
-    
-            $category = Category::All();
-            $category1 = Category::Where('slug', $slug)->first();
-            $products = Product::Where('cate_id', $category1->id)->where('status', '0')->get();
+        return view('frontend.pages.project-details', [
+        
+                    'seometa' => $seometa,
+                    'project' => $project,
+                    'title' => $project->name,
+                        'breadcrumbs' => [
+                            ['url' => '/projects', 'label' => 'Projects'],
+                        ],   
+                    ]);
 
-            return view('pages.viewByCategory', compact(['data', 'category1', 'category', 'products']));
-        }
-        else
-        {
-            return redirect ('/')->with('status', "Slug Does Not Exists");
-        }
-       
     }
 
 }

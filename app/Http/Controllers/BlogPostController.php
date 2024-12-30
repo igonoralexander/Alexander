@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Session;
+
 
 use App\Models\Tag;
 use App\Models\BlogPost;
@@ -83,7 +79,7 @@ class BlogPostController extends Controller
                         'category_id' => $request->category_id,
                         'admin_id' => session()->get('AdmLogId'),
                         'title' => $request->title,
-                        'slug' => \Str::slug($request->title),
+                        'slug' => \Illuminate\Support\Str::slug($request->title),
                         'content' => $request->content,
                         'meta_title' => $request->meta_title,
                         'meta_keywords' => $request->meta_keywords,
@@ -175,7 +171,7 @@ class BlogPostController extends Controller
             'category_id'      => $request->category_id,
             'title'            => $request->title,
             'admin_id' => session()->get('AdmLogId'),
-            'slug'             => \Str::slug($request->title),
+            'slug'             => \Illuminate\Support\Str::slug($request->title),
             'content'          => $request->content,
             'meta_title'       => $request->meta_title,
             'meta_keywords'    => $request->meta_keywords,

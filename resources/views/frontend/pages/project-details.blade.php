@@ -1,5 +1,5 @@
 @extends('layouts.frontend.pages')
-@section('pageTitle', isset($pageTitle) ? $pageTitle: $blog->title . '  - Alexander Igonor')
+@section('pageTitle', isset($pageTitle) ? $pageTitle: $project->name . '  - Alexander Igonor')
 
 @section('style')
 	<style>
@@ -22,16 +22,15 @@
                                         <a href="/" class="tags-item">Home</a>
                                     </li>
                                     <li>
-                                        <a href="/blog" class="tags-item">Articles</a>
+                                        <a href="/projects" class="tags-item">Projects</a>
                                     </li>
                                 </ul>
-                                <div class="title">{{ $blog->title }}</div>
-                                <div class="meta">by <span>{{ $blog->admin->full_name }}</span> on <span>{{ $blog->created_at->format('M') }} {{ $blog->created_at->format('d') }}</span></div>
+                                <div class="title">{{ $project->name }}</div>
                                 <div class="image">
-                                    <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
+                                    <img class="lazyload" data-src="{{ asset($project->image)}}" src="{{ asset($project->image)}}" alt="{{ $project->name }}">
                                 </div>
                             </div>
-                            <div class="desc">{!! $blog->content !!}</div>
+                            <div class="desc">{!! $project->content !!}</div>
                             <div class="global-reset bot d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="d-flex align-items-center gap-20">
                                     <p>Share:</p>
@@ -44,30 +43,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="tf-article-navigation">
-                                <div class="item position-relative d-flex w-100 prev">
-                                    <a href="#" class="icon">
-                                        <i class="icon-arrow-left"></i>
-                                    </a>
-                                    <div class="inner">
-                                        <a href="#">PREVIOUS</a>
-                                        <h6>
-                                            <a href="#">Fashionista editors reveal their designer</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="item position-relative d-flex w-100 justify-content-end next">
-                                    <div class="inner text-end">
-                                        <a href="#">NEXT</a>
-                                        <h6>
-                                            <a href="#">The next generation of leather alternatives</a>
-                                        </h6>
-                                    </div>
-                                    <a href="#" class="icon">
-                                        <i class="icon-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,8 +51,6 @@
         <div class="btn-sidebar-mobile d-flex">
             <button data-bs-toggle="offcanvas" data-bs-target="#sidebarmobile" aria-controls="offcanvasRight"><i class="icon-open"></i></button>
         </div>
-        <!-- /blog-detail -->
-
-        @include('partials.related-blog-posts')    
+        <!-- /blog-detail -->    
 
 @endsection

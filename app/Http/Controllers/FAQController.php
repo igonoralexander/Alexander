@@ -3,14 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\FAQ;
-use App\Models\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Session;
-
 
 class FAQController extends Controller
 {
@@ -98,11 +93,6 @@ class FAQController extends Controller
     {
         //
         $faq = FAQ::find($faq->id);
-
-        if (File::exists($path))
-        {
-            File::delete($path);
-        }
         $faq->delete();
 
         return back()->with('success', 'Deleted!');

@@ -13,7 +13,7 @@ class Project extends Model
 {
     protected $table = 'projects';
 
-    protected $fillable = [ 'category_id', 'project_name', 'link', 'image', ];
+    protected $fillable = [ 'category_id', 'name', 'content', 'link', 'image', ];
 
     use HasFactory;
 

@@ -1,27 +1,27 @@
 @extends('layouts.backend.admin')
-@section('pageTitle', isset($pageTitle) ? $pageTitle: 'IG Software Nig - Admin Management')
+@section('pageTitle', isset($pageTitle) ? $pageTitle: $setting->site_title . ' - Admin Management')
 
 @section('content')
         <div class="container">
           <div class="page-inner">
             <div class="page-header">
-              <h3 class="fw-bold mb-3"> Blog </h3>
+              <h3 class="fw-bold mb-3"> Project </h3>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home"><a href="{{route ('admin.dashboard') }}"><i class="icon-home"></i></a></li>
                 <li class="separator"><i class="icon-arrow-right"></i></li>
-                <li class="nav-item"><a href="{{route ('admin.blog-posts') }}">View All Blogs</a></li>
+                <li class="nav-item"><a href="{{route ('admin.projects') }}">View All Projects</a></li>
                 <li class="separator"><i class="icon-arrow-right"></i></li> 
-                <li class="nav-item"><a href="#">Add Blog Post</a></li>
+                <li class="nav-item"><a href="#">Add Projects</a></li>
               </ul>
             </div>
             <div class="row">
                 <!-- Add/Edit Form -->
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4> Add Blog Post</h4>
+                        <h4> Add Project</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.blog-posts.store') }}" method = "POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.projects.store') }}" method = "POST" enctype="multipart/form-data">
                             @csrf
 
                             @if (session()->has('message'))
@@ -30,10 +30,10 @@
 
 
                             <div class="form-group">
-                                <label for="blogCategory">Blog Category</label>
-                                <select name="category_id" class="form-control" id="blogCategory">
-                                    <option value="">-- Select Blog Category --</option>
-                                    @foreach ($blogCategories as $category)
+                                <label for="projectCategory">Project Category</label>
+                                <select name="category_id" class="form-control" id="projectCategory">
+                                    <option value="">-- Select Project Category --</option>
+                                    @foreach ($projectCategories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
@@ -41,50 +41,32 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="tags">Tags (comma-seperated):</label>
-                                <input type="text" name="tags" value = "{{ old('tags') }}" placeholder = "e.g., Laravel, PHP, Web Development" class="form-control" id="tags" />
-                                @error('tags') <span class="text-danger">{{ $message }}</span> @enderror
+                                <label for="title">Name</label>
+                                <input type="text" name="name" value = "{{ old('name') }}" class="form-control" id="name" />
+                                @error('name') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" name="title" value = "{{ old('title') }}" class="form-control" id="title" />
-                                @error('title') <span class="text-danger">{{ $message }}</span> @enderror
+                                <label for="title">Link</label>
+                                <input type="text" name="link" value = "{{ old('link') }}" class="form-control" id="link" />
+                                @error('link') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             
                             <div class="form-group">
                                 <label for="image">Image</label>
-                                <input type="file" name="cover_image" class="form-control" id="cover_image"accept="image/*"  />
-                                @error('cover_image') <span class="text-danger">{{ $message }}</span> @enderror
+                                <input type="file" name="image" class="form-control" id="image"accept="image/*"  />
+                                @error('image') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="meta_title">Meta Title</label>
-                                <input type="text" name="meta_title" value = "{{ old('meta_title') }}" class="form-control" id="meta_title" />
-                                @error('meta_title') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="meta_keywords">Meta Description</label>
-                                <textarea name="meta_keywords" class="form-control" id="meta_keywords" rows="10">{{ old('meta_keywords') }}</textarea>
-                                @error('meta_keywords') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="meta_description">Meta Description</label>
-                                <textarea name="meta_description" class="form-control" id="meta_description" rows="10">{{ old('meta_description') }}</textarea>
-                                @error('meta_description') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="content-editor">Blog Content</label>
+                                <label for="content-editor">Content</label>
                                 <textarea id = "content-editor" class="form-control" rows = "50">{{ old('content') }}</textarea>
                                 <input type="hidden" name="content" id="content">
                                 @error('content') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <button type = "submit" class="btn btn-primary"> Save </button>
-                            <a href = "{{ route('admin.blog-posts') }}" class="btn btn-secondary">Back </a>
+                            <a href = "{{ route('admin.projects') }}" class="btn btn-secondary">Back </a>
                         </form>
                     </div>
                 </div>

@@ -39,14 +39,14 @@
                                     <!-- card product 1 -->
                                     <div class="card-product style-9">
                                         <div class="card-product-wrapper">
-                                            <a href="product-detail.html" class="product-img">
+                                            <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="product-img">
                                                 <img class="lazyload img-product" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{$item->name }}">
                                                 <img class="lazyload img-hover" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{$item->name }}">
                                             </a>
                                         </div>
                                         <div class="card-product-info">
                                             <div class="inner-info">
-                                                <a href="product-detail.html" class="title link fw-6">{{$item->name }}</a>
+                                                <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="title link fw-6">{{$item->name }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -61,14 +61,14 @@
                                     @foreach ($category->projects as $item)
                                         <div class="card-product style-9">
                                             <div class="card-product-wrapper">
-                                                <a href="product-detail.html" class="product-img">
+                                                <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="product-img">
                                                     <img class="lazyload img-product" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name }}">
                                                     <img class="lazyload img-hover" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name }}">
                                                 </a>
                                             </div>
                                             <div class="card-product-info">
                                                 <div class="inner-info">
-                                                    <a href="product-detail.html" class="title link fw-6">{{ $item->name }}</a>
+                                                    <a href="{{ route('project.details', $item->slug) }} " target="_blank" class="title link fw-6">{{ $item->name }}</a>
                                                 </div>
                                             </div>
                                         </div>

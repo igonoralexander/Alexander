@@ -10,6 +10,7 @@ use App\Http\Controllers\VoluntersController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ServicesPageController;
 use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\HowWeWorkPageController;
@@ -44,8 +45,17 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
         
         //projects-category
-        Route::get('/project/category', [ProjectController::class, 'index'])->name('project-category');
-        Route::post('/project/category/create', [ProjectController::class, 'store'])->name('project-category.store');
+        Route::get('/project/category', [ProjectsController::class, 'indexCategory'])->name('project-category');
+        Route::post('/project/category/create', [ProjectsController::class, 'storeCategory'])->name('project-category.store');
+
+
+        Route::get('/projects', [ProjectsController::class, 'index'])->name('projects');
+        Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+        Route::post('/projects', [ProjectsController::class, 'store'])->name('projects.store');
+        Route::get('/projects/{id}/edit', [ProjectsController::class, 'edit'])->name('projects.edit');
+        Route::get('/projects/{id}/show', [ProjectsController::class, 'show'])->name('projects.show');
+        Route::put('/projects/{id}/update', [ProjectsController::class, 'update'])->name('projects.update');
+        Route::delete('/projects/{id}/delete', [ProjectsController::class, 'destroy'])->name('projects.destroy');
 
         //Terms-conditions
 

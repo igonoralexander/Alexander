@@ -11613,6 +11613,15 @@ ul.tags-lists li a:hover {
   margin-bottom: 20px; /* Adds spacing between paragraphs */
 }
 
+.blog-detail .blog-detail-main .desc a {
+  color: blue;
+}
+
+.blog-detail .blog-detail-main .desc a:hover {
+  color: red; /* Optional: color change on hover */
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
 /* General Styling for Lists in the About Section */
 .blog-detail .blog-detail-main .desc ul,
 .blog-detail .blog-detail-main .desc ol {

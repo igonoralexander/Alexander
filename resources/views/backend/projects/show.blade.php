@@ -5,13 +5,13 @@
       <div class="container">
           <div class="page-inner">
             <div class="page-header">
-              <h3 class="fw-bold mb-3">Blog</h3>
+              <h3 class="fw-bold mb-3">Project</h3>
               <ul class="breadcrumbs mb-3">
                 <li class="nav-home"><a href="{{route ('admin.dashboard') }}"><i class="icon-home"></i></a></li>
                 <li class="separator"><i class="icon-arrow-right"></i></li>
-                <li class="nav-item"><a href="{{ route('admin.blog-posts') }}">View All Blogs</a></li>
+                <li class="nav-item"><a href="{{ route('admin.projects') }}">View All Projects</a></li>
                 <li class="separator"><i class="icon-arrow-right"></i></li> 
-                <li class="nav-item"><a href="#">Blog Post</a></li>
+                <li class="nav-item"><a href="#">Project</a></li>
               </ul>
             </div>
                 
@@ -19,18 +19,18 @@
               <div class="row">
                         <div class="col-md-12 mb-12">
                             <div class="card h-100 shadow-sm">
-                                @if($blogPost->cover_image)
-                                    <img src="{{ asset($blogPost->cover_image) }}" class="card-img-top small-image" style = "width: 400px;" alt="{{ $blogPost->title }}">
+                                @if($project->image)
+                                    <img src="{{ asset($project->image) }}" class="card-img-top small-image" style = "width: 400px;" alt="{{ $project->name }}">
                                 @endif
 
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $blogPost->title }}</h5>
-                                    <p class="card-text">{!! $blogPost->content !!}</p>
-                                    <p><strong>Author:</strong> {{ $blogPost->admin->full_name }}</p>
+                                    <h5 class="card-title">{{ $project->name }}</h5>
+                                    <p class="card-text">{!! $project->content !!}</p>
+                                    <p><strong>Link:</strong> {{ $project->link }}</p>
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
-                                    <a href = "{{ route ('admin.blog-posts.edit', $blogPost->id) }}" class="btn btn-info btn-sm">Edit</a>
-                                    <a href ="{{ route ('admin.blog-posts.destroy', $blogPost->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href = "{{ route ('admin.projects.edit', $project->id) }}" class="btn btn-info btn-sm">Edit</a>
+                                    <a href ="{{ route ('admin.projects.destroy', $project->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                 </div>
                             </div>
                         </div>

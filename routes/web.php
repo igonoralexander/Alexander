@@ -83,9 +83,9 @@ Route::get('/blog', function () {
 #blogDetail
 Route::get('/blog/{slug}', [FrontEndController::class, 'blogDetail'])->name('blog.details');
 
-Route::get('/about', [AboutUsPageController::class, 'index'])->name('about');
+Route::get('/project/{slug}', [FrontEndController::class, 'projectDetail'])->name('project.details');
 
-// Route::get('/', [ProjectsController::class, 'index']);
+Route::get('/about', [AboutUsPageController::class, 'index'])->name('about');
 
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 

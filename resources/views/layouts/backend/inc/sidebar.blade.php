@@ -57,11 +57,9 @@
                 </a>
                 <div class="collapse {{ Request::routeIs(
                                                           'admin.main-slider-index',
-                                                          'admin.parallax-section',
                                                           'admin.about-section-create',
                                                           'admin.services-section-create',
                                                           'admin.why-choose-us',
-                                                          'admin.how-we-work-section',
                                                           'admin.clients',
                                                           'admin.tech-stacks',
                                                           'admin.testimonial-index',
@@ -79,14 +77,6 @@
 
                     <li class=" {{ Route::is('admin.services-section-create') ? 'active' : '' }}">
                       <a href="{{route ('admin.services-section-create') }}"><span class="sub-item">Services Section</span></a>
-                    </li>
-
-                    <li class=" {{ Route::is('admin.how-we-work-section') ? 'active' : '' }}">
-                      <a href="{{route ('admin.how-we-work-section') }}"><span class="sub-item">How We Work Section</span></a>
-                    </li>
-
-                    <li class=" {{ Route::is('admin.parallax-section') ? 'active' : '' }}">
-                      <a href="{{route ('admin.parallax-section') }}"><span class="sub-item">Parallax Section</span></a>
                     </li>
 
                     <li class=" {{ Route::is('admin.why-choose-us') ? 'active' : '' }}">
@@ -122,9 +112,6 @@
                                                           'admin.about-us',
                                                           'admin.services-section-create',
                                                           'admin.faq-index',
-                                                          'admin.cadre-levels',
-                                                          'admin.industry.index',
-                                                          'admin.how-we-work',
                                                           'admin.terms-conditions',
                                                           'admin.privacy-policy') ? 'show' : '' }}" id="pages">
                   <ul class="nav nav-collapse">
@@ -143,10 +130,6 @@
 
                     <li class=" {{ Route::is('admin.faq-index') ? 'active' : '' }}">
                       <a href="{{route ('admin.faq-index') }}"><span class="sub-item">FAQs </span></a>
-                    </li>
-
-                    <li class=" {{ Route::is('admin.how-we-work') ? 'active' : '' }}">
-                      <a href="{{route ('admin.how-we-work') }}"><span class="sub-item">How we Work</span></a>
                     </li>
 
                     <li class=" {{ Route::is('admin.terms-conditions') ? 'active' : '' }}">
@@ -198,21 +181,21 @@
                 </a>
                 <div class="collapse {{ Request::routeIs(
                                                           'admin.project-category',
-                                                          'admin.blog-posts',
-                                                          'admin.blog-posts.create') ? 'show' : '' }}" id="projects">
+                                                          'admin.projects',
+                                                          'admin.projects.create') ? 'show' : '' }}" id="projects">
                   <ul class="nav nav-collapse">
                    
                    <li class=" {{ Route::is('admin.project-category') ? 'active' : '' }}">
                       <a href="{{route ('admin.project-category') }}"><span class="sub-item">Add Project Category</span></a>
                    </li>
 
-                   <li class=" {{ Route::is('admin.blog-posts') ? 'active' : '' }}">
-                      <a href="{{route ('admin.blog-posts') }}"><span class="sub-item">All Projects</span></a>
+                   <li class=" {{ Route::is('admin.projects') ? 'active' : '' }}">
+                      <a href="{{route ('admin.projects') }}"><span class="sub-item">All Projects</span></a>
                     </li>
                     
 
-                    <li class=" {{ Route::is('admin.projects-section-create') ? 'active' : '' }}">
-                      <a href="{{route ('admin.projects-section-create') }}"><span class="sub-item">Add Projects</span></a>
+                    <li class=" {{ Route::is('admin.projects.create') ? 'active' : '' }}">
+                      <a href="{{route ('admin.projects.create') }}"><span class="sub-item">Add Projects</span></a>
                     </li>
 
                   </ul>
