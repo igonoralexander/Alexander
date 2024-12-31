@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ $seometa->meta_title ?? 'Alexander Igonor' }}</title>
+    <title>{{ $seometa->meta_title ?? View::yieldContent('pageTitle', 'Default Page Title') }}</title>
      <meta name="keywords" content = "{{ $seometa->meta_keywords ?? null }}">
     <meta name="description" content="{{ $seometa->meta_description ?? null }}">
 

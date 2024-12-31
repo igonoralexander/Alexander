@@ -15,7 +15,7 @@ class ContactUsController extends Controller
 
         return view('frontend.pages.contact', [
             'seometa' => $seometa,
-            'title' => 'Contact Me',
+            'title' => 'Lets Connect',
             'breadcrumbs' => [
                 ['url' => null, 'label' => 'Get in Touch'],
             ],   

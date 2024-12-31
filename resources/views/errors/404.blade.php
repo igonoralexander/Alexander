@@ -1,5 +1,5 @@
 @extends('layouts.frontend.frontend')
-@section('pageTitle', isset($pageTitle) ? $pageTitle: 'IG Software Nig - Error 404')
+@section('pageTitle', isset($pageTitle) ? $pageTitle: '404 | Page Not Found')
 
 @section('style')
 	<style>
