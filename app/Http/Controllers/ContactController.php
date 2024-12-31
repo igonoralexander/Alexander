@@ -60,11 +60,6 @@ class ContactController extends Controller
             Contact::create($data);
             
             return view('frontend.pages.thankyou' , compact('thankyou_name', 'seometa'));
-        
-        //  } catch (\Exception $e) {
-        //      // Handle email delivery failure
-        //      return back()->withErrors(['email' => 'Failed to send message. Please try again later.']);
-        //  }
      }
      
     /**

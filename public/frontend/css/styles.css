@@ -11731,7 +11731,7 @@ blockquote .text {
 
 .tf-page-title {
   padding: 69px 0 65px;
-  background-image: url(../images/shop/file/page-title-blog.png);
+  background-image: url(../images/shop/file/alexander-banner.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11746,7 +11746,7 @@ blockquote .text {
   margin-top: 5px;
 }
 .tf-page-title .breadcrumbs li {
-  color: rgb(84, 84, 84);
+  color: rgb(255, 255, 255);
 }
 .tf-page-title .breadcrumbs i {
   font-size: 10px;
@@ -19360,7 +19360,7 @@ blockquote .text {
   }
 
   h1 {
-    font-size: 34px;
+    font-size: 32px;
     line-height: 40.8px;
   }
 

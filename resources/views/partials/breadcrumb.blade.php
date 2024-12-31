@@ -3,10 +3,11 @@
     <div class="container-full">
         <div class="row">
             <div class="col-12">
-                        <div class="heading text-center"><strong> {{$title}} </strong></div>
-                        <ul class="breadcrumbs d-flex align-items-center justify-content-center">
+                        <br>
+                        <div class="heading text-center"><strong style = "color: white;"> {{$title}} </strong></div>
+                        <ul class="breadcrumbs d-flex align-items-center justify-content-center" >
                             <li>
-                                <a href="/">Home</a>
+                                <a href="/"> <strong style = "color: white;"> Home </strong> </a>
                             </li>
                             <li>
                                 <i class="icon-arrow-right"></i>

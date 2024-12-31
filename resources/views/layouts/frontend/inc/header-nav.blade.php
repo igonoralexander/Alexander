@@ -45,6 +45,10 @@
                                         <a href="/faq" class="item-link">FAQs</a>
                                     </li>
 
+                                    <li class="menu-item position-relative">
+                                    <a href="https://drive.google.com/file/d/1rCmSwZW0DDKXS6bcU1VmYJfG5-YbanRF/view?usp=drive_link" target="_blank" class="item-link">Resume</a>
+                                    </li>
+
                                 </ul>  
                             </nav>
                         </div>

@@ -46,8 +46,6 @@
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col" class="">Email</th>
-                            <th scope="col" class="">Phone</th>
-                            <th scope="col" class="">Subject</th>
                             <th scope="col" class="">Message</th>
                           </tr>
                         </thead>
@@ -58,8 +56,6 @@
                             <th scope="row">{{$loop->iteration}}</th>
                               <th scope="row">{{$contact->name}}</th>
                               <td class="">{{$contact->email}}</td>
-                              <td class="">{{$contact->phone}}</td>
-                              <td class="">{{$contact->subject}}</td>
                               <td class="">{{$contact->content}}</td>
                               </td>
                             </tr>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\FileController;
 /*
@@ -50,7 +51,7 @@ Route::get('/services', function () {
             ['url' => null, 'label' => 'Services'],
         ],   
     ]);
-});
+})->name('services');
 
 Route::get('/portfolio', function () {
 
@@ -68,7 +69,7 @@ Route::get('/portfolio', function () {
             ['url' => null, 'label' => 'My Projects'],
         ],   
     ]);
-});
+})->name('portfolio');
 
 
 Route::get('/blog', function () {
@@ -89,7 +90,7 @@ Route::get('/about', [AboutUsPageController::class, 'index'])->name('about');
 
 Route::get('/contact', [ContactUsController::class, 'index'])->name('contact');
 
-Route::post('/email', [EmailController::class, 'sendEmail']) -> name('send.email');
+Route::post('/sendemail', [ContactController::class, 'create'])->name('send.email');
 
 Route::get('/download/{filename}', [FileController::class, 'download'])->name('file.download');
 
