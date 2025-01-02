@@ -21,7 +21,7 @@
                         <div class="title">
                             Oops...That link is broken.
                         </div>
-                        <p>Sorry for the inconvenience. Go to our homepage to check out our latest collections.</p>
+                        <p>Sorry, the page you’re looking for doesn’t exist or might have been removed. You can go back to my homepage to explore more.</p>
                         <a href="/" class="tf-btn btn-sm radius-3 btn-fill btn-icon animate-hover-btn">Back to Home</a>
                     </div>
                 </div>
