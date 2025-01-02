@@ -24,26 +24,6 @@ class FrontEndController extends Controller
         return BlogPost::orderBy('views_count', 'desc')->take(5)->get(); // Top 5 most-read posts
     }
 
-
-    public function industryDetail($slug)
-    { 
-
-        $industry = Industry::where('slug', $slug)->firstOrFail();
-        $seometa = SeoMeta::where('page_name', 'Industries We Serve')->first();
-
-        return view('frontend.industries.industries-detail', [
-
-                    'seometa' => $seometa,
-                    'industry' => $industry,
-                    'title' => $industry->name,
-                        'breadcrumbs' => [
-                            ['url' => '/industries', 'label' => 'Industries We Serve'],
-                            ['url' => null, 'label' => $industry->name],
-                        ],   
-                    ]);
-
-    }
-
     public function blogDetail($slug)
     { 
 
