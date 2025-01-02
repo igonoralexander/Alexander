@@ -81,8 +81,6 @@ Route::get('/blog', function () {
     ]);
 });
 
-Route::get('/test-error', [FrontEndController::class, 'testError']);
-
 #blogDetail
 Route::get('/blog/{slug}', [FrontEndController::class, 'blogDetail'])->name('blog.details');
 

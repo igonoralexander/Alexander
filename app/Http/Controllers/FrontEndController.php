@@ -73,12 +73,6 @@ class FrontEndController extends Controller
 
     }
 
-    public function testError()
-    {
-        abort(500); // Trigger a 500 error
-    }
-
-
     public function projectDetail($slug)
     { 
 
