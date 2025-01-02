@@ -120,8 +120,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For questions or feedback, feel free to reach out via:
-- **Email**: yourname@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
-- **Portfolio**: [Your Portfolio URL](https://yourportfolio.com)
+- **Email**: contact@alexanderigonor.online
+- **GitHub**: (https://github.com/igonoralexander)
+- **Portfolio**: (https://alexanderigonor.online)
 
 ---

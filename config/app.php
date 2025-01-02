@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://igsoftware.com.ng'),
+    'url' => env('APP_URL', 'https://alexanderigonor.online'),
 
     'asset_url' => env('ASSET_URL', null),
 

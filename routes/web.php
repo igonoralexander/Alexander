@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\FileController;
@@ -21,6 +22,15 @@ use App\Http\Controllers\FileController;
 use App\Models\SeoMeta;
 use App\Models\ProjectCategory;
 use App\Models\Project;
+
+
+Route::get('/sitemap', [SitemapController::class, 'generateSitemap'])->name('generate.sitemap');
+
+Route::get('/sitemap.xml', function () {
+    return response()->file(public_path('sitemap.xml'), [
+        'Content-Type' => 'application/xml',
+    ]);
+});
 
 Route::get('/', function () {
     $seometa = SeoMeta::where('page_name', 'Home')->first();
