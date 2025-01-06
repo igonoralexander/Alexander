@@ -83,7 +83,11 @@ Route::get('/portfolio', function () {
 
 
 Route::get('/blog', function () {
+
+    $seometa = SeoMeta::where('page_name', 'Blog')->first();
+
     return view('frontend.blog.index', [
+        'seometa' => $seometa,
         'title' => 'Articles and Updates',
         'breadcrumbs' => [
             ['url' => '#', 'label' => 'My Articles'],
