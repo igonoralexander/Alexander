@@ -16,8 +16,8 @@
                 <div class="tf-grid-layout gap30 lg-col-2">
                     <div class="tf-content-left">
                         <div class="mb_36">
-                            <p class="mb_15"><strong>My Availability</strong></p>
-                            <p class="mb_15">I am available for consultations and collaborations daily from 9 AM to 7 PM.</p>
+                            <h1 class="mb_15"><strong>My Availability</strong></h1>
+                            <p class="mb_15">I am available for hire, consultations and collaborations.</p>
                         </div>
                         <div class="mb_20">
                             <p class="mb_15"><strong>Phone</strong></p>
