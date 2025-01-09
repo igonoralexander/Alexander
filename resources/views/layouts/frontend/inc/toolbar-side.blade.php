@@ -15,16 +15,15 @@
                         </a>
                     </li>
 
-                    
                     <li class="nav-mb-item">
-                        <a href="/servies" class="tf-category-link mb-menu-link">
-                            <span>Services</span>
+                        <a href="/services" class="tf-category-link mb-menu-link">
+                            <span>My Services</span>
                         </a>
                     </li>
 
                     <li class="nav-mb-item">
                         <a href="/portfolio" class="tf-category-link mb-menu-link">
-                            <span>Portfolio/Projects</span>
+                            <span>My Projects</span>
                         </a>
                     </li>
 

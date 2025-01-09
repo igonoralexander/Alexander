@@ -18,15 +18,11 @@
                     </li>
 
                     <li class="nav-mb-item">
-                        <a href="/portfolio" class="mb-menu-link">Portfolio/Projects</a>
+                        <a href="/portfolio" class="mb-menu-link">My Projects</a>
                     </li>
 
                     <li class="nav-mb-item">
                         <a href="/blog" class="mb-menu-link">Articles</a>
-                    </li>
-
-                    <li class="nav-mb-item">
-                        <a href="/testimonials" class="mb-menu-link">Testimonials</a>
                     </li>
                     
                     <li class="nav-mb-item">
