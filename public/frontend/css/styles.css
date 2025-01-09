@@ -2510,7 +2510,7 @@ label {
 	margin-bottom: 15px;
 }
 
-.sec-title h2{
+.sec-title h1, h2{
 	position: relative;
 	display: block;
 	font-size:30px;
