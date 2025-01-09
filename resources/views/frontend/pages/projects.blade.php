@@ -15,7 +15,7 @@
         <section class="flat-spacing-5 pt_0">
             <div class="container">
                 <div class="sec-title" style = "margin-top: 20px;">
-                        <h2>Projects Highlights</h2>
+                        <h1>Projects Highlights</h1>
                         <div class="text" style = "font-size: 14px;">Projects that highlight innovation, efficiency, and user-focused design, demonstrating proven results and expertise.</div>
                 </div>
                 <div class="flat-animate-tab">

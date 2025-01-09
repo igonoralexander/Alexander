@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="tf-accordion-wrap d-flex justify-content-between">
                     <div class="content">
-                        <h5 class="mb_24">Frequently Ask Questions</h5>
+                        <h1 class="mb_24">Frequently Ask Questions</h1>
                         <div class="flat-accordion style-default has-btns-arrow mb_60">
                             @foreach ($faq as $item)
                                 <div class="flat-toggle">

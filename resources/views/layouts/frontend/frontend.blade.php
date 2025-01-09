@@ -8,7 +8,7 @@
      <meta name="keywords" content = "{{ $seometa->meta_keywords ?? null }}">
     <meta name="description" content="{{ $seometa->meta_description ?? null }}">
 
-    <meta name="author" content="themesflat.com">
+    <meta name="author" content="Alexander Igonor">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     

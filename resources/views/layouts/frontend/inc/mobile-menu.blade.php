@@ -36,6 +36,11 @@
                     <li class="nav-mb-item">
                         <a href="/contact" class="mb-menu-link">Contact</a>
                     </li>
+
+                    <li class="nav-mb-item">
+                        <a href="https://drive.google.com/file/d/1rCmSwZW0DDKXS6bcU1VmYJfG5-YbanRF/view?usp=drive_link" class="mb-menu-link">Resume</a>
+                    </li>
+
                 </ul>
                 <div class="mb-other-content">
                     <div class="d-flex group-icon">

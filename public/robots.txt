@@ -7,6 +7,6 @@ Disallow: /admin/
 Disallow: /*?SA
 Disallow: /*?MA
 Disallow: /*?ND
-Allow: / 
+Allow: /
 
 Sitemap: https://alexanderigonor.online/sitemap.xml
