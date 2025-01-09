@@ -126,7 +126,7 @@
                         <div class="cause-block alternate col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-delay="0ms">
                                 <div class="image-box">
-                                    <figure class="image"><a href="{{ $item->link }}"><img src="{{ asset($item->image) }}" alt=""></a></figure>
+                                    <figure class="image"><a href="{{ $item->link }}"><img src="{{ asset($item->image) }}" alt="{{ $item->name }}"></a></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="{{ $item->link }}">{{ $item->name }}</a></h3>
