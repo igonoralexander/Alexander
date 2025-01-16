@@ -1,4 +1,7 @@
 User-agent: *
-Crawl-delay: 5
+Crawl-delay: 10
+
 
 Allow: /
+
+Sitemap: https://alexanderigonor.online/sitemap.xml
