@@ -137,7 +137,7 @@
                     @endforeach
 
                     <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center;">
-                        <a href="/projects" class="d-flex align-items-center gap-10">
+                        <a href="/portfolio" class="d-flex align-items-center gap-10">
                             <strong>
                                 Explore More of My Work 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
