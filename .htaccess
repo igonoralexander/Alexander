@@ -1,6 +1,17 @@
 <IfModule mod_rewrite.c>
- RewriteEngine On
-RewriteRule ^(.*)$ public/$1 [L]
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Ensure XML files are served with the correct Content-Type
+<IfModule mod_mime.c>
+    AddType application/xml .xml
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.xml$">
+        Header set Content-Type "application/xml"
+    </FilesMatch>
 </IfModule>
 
 # php -- BEGIN cPanel-generated handler, do not edit
@@ -12,5 +23,4 @@ RewriteRule ^(.*)$ public/$1 [L]
         FcgidWrapper /usr/local/cpanel/cgi-sys/ea-php81 .phtml
     </IfModule>
 </IfModule>
-
 # php -- END cPanel-generated handler, do not edit
