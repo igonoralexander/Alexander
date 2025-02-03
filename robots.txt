@@ -4,4 +4,4 @@ Crawl-delay: 10
 
 Allow: /
 
-Sitemap: http://alexanderigonor.online/sitemap.xml
+Sitemap: https://alexanderigonor.online/sitemap.xml

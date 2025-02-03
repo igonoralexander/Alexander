@@ -9,4 +9,4 @@ Disallow: /*?MA
 Disallow: /*?ND
 Allow: /
 
-Sitemap: http://alexanderigonor.online/sitemap.xml
+Sitemap: https://alexanderigonor.online/sitemap.xml
