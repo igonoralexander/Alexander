@@ -20,16 +20,16 @@ class SitemapController extends Controller
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
         $staticUrls = [
-            ['url' => 'https://alexanderigonor.online/', 'priority' => 1.0, 'changefreq' => 'daily'], // Homepage updates frequently
-            ['url' => 'https://alexanderigonor.online/services', 'priority' => 0.8, 'changefreq' => 'weekly'], // Services change occasionally
-            ['url' => 'https://alexanderigonor.online/portfolio', 'priority' => 0.8, 'changefreq' => 'monthly'], // Projects update less often
-            ['url' => 'https://alexanderigonor.online/about', 'priority' => 0.8, 'changefreq' => 'yearly'], // About rarely changes
-            ['url' => 'https://alexanderigonor.online/blog', 'priority' => 0.8, 'changefreq' => 'daily'], // Blog updates frequently
-            ['url' => 'https://alexanderigonor.online/faq', 'priority' => 0.8, 'changefreq' => 'monthly'], // FAQs update occasionally
-            ['url' => 'https://alexanderigonor.online/gallery', 'priority' => 0.8, 'changefreq' => 'monthly'], // Gallery might update less often
-            ['url' => 'https://alexanderigonor.online/contact', 'priority' => 0.8, 'changefreq' => 'yearly'], // Contact details rarely change
-            ['url' => 'https://alexanderigonor.online/terms-conditions', 'priority' => 0.8, 'changefreq' => 'yearly'], // Policies change rarely
-            ['url' => 'https://alexanderigonor.online/privacy-policy', 'priority' => 0.8, 'changefreq' => 'yearly'], // Policies change rarely
+            ['url' => 'http://alexanderigonor.online/', 'priority' => 1.0, 'changefreq' => 'daily'], // Homepage updates frequently
+            ['url' => 'http://alexanderigonor.online/services', 'priority' => 0.8, 'changefreq' => 'weekly'], // Services change occasionally
+            ['url' => 'http://alexanderigonor.online/portfolio', 'priority' => 0.8, 'changefreq' => 'monthly'], // Projects update less often
+            ['url' => 'http://alexanderigonor.online/about', 'priority' => 0.8, 'changefreq' => 'yearly'], // About rarely changes
+            ['url' => 'http://alexanderigonor.online/blog', 'priority' => 0.8, 'changefreq' => 'daily'], // Blog updates frequently
+            ['url' => 'http://alexanderigonor.online/faq', 'priority' => 0.8, 'changefreq' => 'monthly'], // FAQs update occasionally
+            ['url' => 'http://alexanderigonor.online/gallery', 'priority' => 0.8, 'changefreq' => 'monthly'], // Gallery might update less often
+            ['url' => 'http://alexanderigonor.online/contact', 'priority' => 0.8, 'changefreq' => 'yearly'], // Contact details rarely change
+            ['url' => 'http://alexanderigonor.online/terms-conditions', 'priority' => 0.8, 'changefreq' => 'yearly'], // Policies change rarely
+            ['url' => 'http://alexanderigonor.online/privacy-policy', 'priority' => 0.8, 'changefreq' => 'yearly'], // Policies change rarely
         ];
         
 
