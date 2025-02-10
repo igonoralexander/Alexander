@@ -45,7 +45,7 @@
                             <p><strong>Phone:</strong> {{ $contact->phone }}</p>
                             <p><strong>Subject:</strong> {{ $contact->subject }}</p>
                             <p><strong>Message:</strong></p>
-                            <p>{{ Str::limit($contact->content, 200) }}</p>
+                            <p>{!! ($contact->content) !!}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
                             <button wire:click="delete({{ $contact->id }})" class="btn btn-danger btn-sm">Delete</button>
