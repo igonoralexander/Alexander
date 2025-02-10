@@ -14,6 +14,7 @@
     
    <!-- font -->
    <link rel="stylesheet" href="{{ asset ('frontend/fonts/fonts.css') }}">
+   <link rel="canonical" href="https://igsoftware.com.ng/">
    <!-- Icons -->
    <link rel="stylesheet" href="{{ asset ('frontend/fonts/font-icons.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/bootstrap.min.css') }}">
