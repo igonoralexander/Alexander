@@ -15,7 +15,7 @@
         <section class="about-section-three">
             <div class="container">
                 <div class="sec-title" style = "margin-top: 20px;">
-                    <div class="text" style = "font-size: 15px;"><strong>10+ years of experience in software engineering, I create innovative, user-focused solutions, developing applications and platforms that drive success</strong></div>
+                    <div class="text" style = "font-size: 15px;"><strong>5+ years of experience in software engineering, I create innovative, user-focused solutions, developing applications and platforms that drive success</strong></div>
                 </div>
                 <div class="row clearfix">
                     <!--Text Column-->
