@@ -16,7 +16,7 @@
                 <div class="tf-grid-layout gap30 lg-col-2">
                     <div class="tf-content-left">
                         <div class="mb_36">
-                            <h1 class="mb_15"><strong>My Availability</strong></h1>
+                            <h2 class="mb_15"><strong>My Availability</strong></h2>
                             <p class="mb_15">I am available for hire, consultations and collaborations.</p>
                         </div>
                         <div class="mb_20">
@@ -30,8 +30,8 @@
                         
                         <div>
                             <ul class="tf-social-icon d-flex gap-20 style-default">
-                                <li><a href="{{ $contact->linkedin }}" target="_blank" class="box-icon link round social-linkedin border-line-black"><i class="fab fa-linkedin fs-14"></i></a></li>
-                                <li><a href="{{ $contact->github }}" target="_blank" class="box-icon link round social-github border-line-black"><i class="fab fa-github fs-14"></i></a></li>
+                                <li><a href="{{ $contact->linkedin }}" target="_blank" rel="noopener noreferrer" class="box-icon link round social-linkedin border-line-black"><i class="fab fa-linkedin fs-14"></i></a></li>
+                                <li><a href="{{ $contact->github }}" target="_blank" rel="noopener noreferrer" class="box-icon link round social-github border-line-black"><i class="fab fa-github fs-14"></i></a></li>
                             </ul>
                         </div>
                     </div>

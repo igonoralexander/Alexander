@@ -1,0 +1,21 @@
+// Custom Bootstrap SCSS build — include only needed parts to reduce CSS size
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Core
+@import "~bootstrap/scss/reboot";
+
+// Layout
+@import "~bootstrap/scss/grid";
+
+// Components (pick minimal set used by the site)
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/carousel";
+
+// Utilities
+@import "~bootstrap/scss/utilities";
+
+// Custom overrides can go here

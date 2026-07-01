@@ -56,7 +56,7 @@ Route::get('/services', function () {
     return view('frontend.pages.services', [
         
         'seometa' => $seometa,  // Pass the SEO meta data
-        'title' => 'What I DO?',
+        'title' => 'Services',
         'breadcrumbs' => [
             ['url' => null, 'label' => 'Services'],
         ],   
@@ -74,7 +74,7 @@ Route::get('/portfolio', function () {
         'categories' => $categories,
         'allprojects' => $allprojects,
 
-        'title' => 'What I Have Done?',
+        'title' => 'Portfolio',
         'breadcrumbs' => [
             ['url' => null, 'label' => 'My Projects'],
         ],   

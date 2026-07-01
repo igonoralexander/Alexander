@@ -25,47 +25,16 @@
                                         <a href="/blog" class="tags-item">Articles</a>
                                     </li>
                                 </ul>
-                                <div class="title">{{ $blog->title }}</div>
+                                <h1 class="title">{{ $blog->title }}</h1>
                                 <div class="meta">by <span>{{ $blog->admin->full_name }}</span> on <span>{{ $blog->created_at->format('M') }} {{ $blog->created_at->format('d') }}</span></div>
                                 <div class="image">
-                                    <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
+                                    @include('components.responsive-image', ['path' => $blog->cover_image, 'alt' => $blog->title, 'class' => '', 'sizes' => '100vw', 'lazyload' => true])
                                 </div>
                             </div>
                             <div class="desc">{!! $blog->content !!}</div>
                             <div class="global-reset bot d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="d-flex align-items-center gap-20">
-                                    <p>Share:</p>
-                                    <ul class="tf-social-icon d-flex style-default">
-                                        <li><a href="#" class="box-icon round social-facebook border-line-black"><i class="icon fs-14 icon-fb"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-twiter border-line-black"><i class="icon fs-12 icon-Icon-x"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-instagram border-line-black"><i class="icon fs-14 icon-instagram"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-tiktok border-line-black"><i class="icon fs-14 icon-tiktok"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-pinterest border-line-black"><i class="icon fs-14 icon-pinterest-1"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tf-article-navigation">
-                                <div class="item position-relative d-flex w-100 prev">
-                                    <a href="#" class="icon">
-                                        <i class="icon-arrow-left"></i>
-                                    </a>
-                                    <div class="inner">
-                                        <a href="#">PREVIOUS</a>
-                                        <h6>
-                                            <a href="#">Fashionista editors reveal their designer</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="item position-relative d-flex w-100 justify-content-end next">
-                                    <div class="inner text-end">
-                                        <a href="#">NEXT</a>
-                                        <h6>
-                                            <a href="#">The next generation of leather alternatives</a>
-                                        </h6>
-                                    </div>
-                                    <a href="#" class="icon">
-                                        <i class="icon-arrow-right"></i>
-                                    </a>
+                                    <a href="/blog" class="tf-btn btn-line fw-6">Back to articles<i class="icon icon-arrow1-top-left"></i></a>
                                 </div>
                             </div>
                         </div>

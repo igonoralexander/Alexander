@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/frontend/css/bootstrap-custom.css": "/frontend/css/bootstrap-custom.css",
+    "/frontend/js/vendor.bundle.js": "/frontend/js/vendor.bundle.js",
+    "/frontend/js/frontend.bundle.js": "/frontend/js/frontend.bundle.js"
 }

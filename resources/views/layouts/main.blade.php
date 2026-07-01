@@ -13,7 +13,7 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -24,8 +24,14 @@
         <link href="{{asset('ig/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
         <link href="{{asset('ig/lib/animate/animate.min.css')}}" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="{{asset('ig/css/bootstrap.min.css')}}" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet (use trimmed build if available) -->
+        @if (file_exists(public_path('frontend/css/purged-bootstrap/bootstrap-custom.css')))
+            <link href="{{ asset('frontend/css/purged-bootstrap/bootstrap-custom.css') }}" rel="stylesheet">
+        @elseif (file_exists(public_path('frontend/css/bootstrap-custom.css')))
+            <link href="{{ asset('frontend/css/bootstrap-custom.css') }}" rel="stylesheet">
+        @else
+            <link href="{{asset('ig/css/bootstrap.min.css')}}" rel="stylesheet">
+        @endif
 
         <!-- Template Stylesheet -->
         <link href="{{asset('ig/css/style.css')}}" rel="stylesheet">
@@ -75,7 +81,7 @@
         <script src="{{asset('ig/lib/easing/easing.min.js' ) }}"></script>
         <script src="{{asset('ig/lib/waypoints/waypoints.min.js' ) }}"></script>
         <script src="{{asset('ig/lib/counterup/counterup.min.js' ) }}"></script>
-        <script src="{{asset('ig/lib/owlcarousel/owl.carousel.min.js' ) }}"></script>
+        <!-- Owl Carousel: load JS lazily only when needed to reduce blocking -->
         <script src="{{asset('ig/lib/isotope/isotope.pkgd.min.js' ) }}"></script>
         <script src="{{asset('ig/lib/lightbox/js/lightbox.min.js' ) }}"></script>
 
@@ -83,7 +89,32 @@
         <script src="{{asset('ig/mail/jqBootstrapValidation.min.js' ) }}"></script>
         <script src="{{asset('ig/mail/contact.js' ) }}"></script>
 
+        <!-- Frontend bundles (vendor + app) -->
+        <script src="{{ asset('frontend/js/vendor.bundle.js') }}" defer></script>
+        <script src="{{ asset('frontend/js/frontend.bundle.js') }}" defer></script>
+
         <!-- Template Javascript -->
         <script src="{{asset('ig/js/main.js' ) }}"></script>
+
+        <!-- Lazy-load Owl Carousel JS and init when .owl-carousel elements appear -->
+        <script>
+            (function(){
+                function loadScript(src, cb){
+                    var s=document.createElement('script'); s.src=src; s.async=true; s.onload=cb; s.onerror=cb; document.head.appendChild(s);
+                }
+                var owlSrc = "{{ asset('ig/lib/owlcarousel/owl.carousel.min.js') }}";
+                if(document.querySelector('.owl-carousel')){
+                    loadScript(owlSrc, function(){ if(window.initCarousels) window.initCarousels(); });
+                } else {
+                    var obs = new MutationObserver(function(mutations, observer){
+                        if(document.querySelector('.owl-carousel')){
+                            observer.disconnect();
+                            loadScript(owlSrc, function(){ if(window.initCarousels) window.initCarousels(); });
+                        }
+                    });
+                    obs.observe(document.body, {childList:true, subtree:true});
+                }
+            })();
+        </script>
     </body>
 </html>

@@ -9,8 +9,8 @@
                                     <div class="footer-menu_item align-items-center" style="color: white; font-weight: 400;">© 2024 Alexander Igonor</div>
                                     <div class="tf-payment global-reset">
                                         <ul class="tf-social-icon d-flex gap-10">
-                                            <li><a href="{{ $contact->linkedin }}" target="_blank" class="box-icon w_34 round social-linkedin social-line"><i class="fab fa-linkedin fs-14"></i></a></li>
-                                            <li><a href="{{ $contact->github }}" target="_blank" class="box-icon w_34 round social-github social-line"><i class="fab fa-github fs-14"></i></a></li>
+                                            <li><a href="{{ $contact->linkedin }}" target="_blank" rel="noopener noreferrer" class="box-icon w_34 round social-linkedin social-line"><i class="fab fa-linkedin fs-14"></i></a></li>
+                                            <li><a href="{{ $contact->github }}" target="_blank" rel="noopener noreferrer" class="box-icon w_34 round social-github social-line"><i class="fab fa-github fs-14"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>

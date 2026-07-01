@@ -19,3 +19,69 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+########################################
+# Compression (Brotli + Deflate) and Caching
+########################################
+
+<IfModule mod_brotli.c>
+    # Prefer Brotli when available
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_deflate.c>
+    # Fallback to gzip/deflate
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+
+    # Don't compress already-compressed formats
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif|zip|gz|bz2|rar)$ no-gzip dont-vary
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Serve immutable cache for fingerprinted static assets
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|avif|svg|woff2|woff|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Short cache for HTML / dynamic responses
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Ensure vary header is set when compression is used
+    Header append Vary Accept-Encoding
+    # Also vary by Accept header so browsers negotiating AVIF/WebP get correct responses
+    Header append Vary Accept
+</IfModule>
+
+########################################
+# Serve AVIF / WebP when the browser supports it
+########################################
+
+<IfModule mod_rewrite.c>
+    # Serve AVIF when available
+    RewriteCond %{HTTP_ACCEPT} image/avif
+    RewriteCond %{REQUEST_URI} \.(jpe?g|png)$ [NC]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.avif -f
+    RewriteRule (.+)\.(jpe?g|png)$ $1.$2.avif [L]
+
+    # Serve WebP when available
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_URI} \.(jpe?g|png)$ [NC]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.webp -f
+    RewriteRule (.+)\.(jpe?g|png)$ $1.$2.webp [L]
+</IfModule>

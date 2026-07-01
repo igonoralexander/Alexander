@@ -15,10 +15,11 @@
                     @foreach ($mainslider as $item)
                         <div class="swiper-slide">
                             <div class="wrap-slider">
-                                <img class="lazyload" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->title }}">
+                                @include('components.responsive-image', ['path' => $item->image, 'alt' => $item->title, 'class' => '', 'sizes' => '100vw', 'lazyload' => true])
                                 <div class="box-content">
                                     <div class="container">
-                                        <h1 class="fade-item fade-item-1" style="font-family: Playfair Display; font-weight: 700;">{!! $item->title !!}</h1>
+                                        @php($heroHeadingTag = $loop->first ? 'h1' : 'h1')
+                                        <{{ $heroHeadingTag }} class="fade-item fade-item-1" style="font-family: Playfair Display; font-weight: 700;">{!! $item->title !!}</{{ $heroHeadingTag }}>
                                         <p class="fade-item fade-item-2">{{ $item->description }}</p>
                                         <a href="{{ $item->button_link }}" class="fade-item fade-item-3 tf-btn btn-fill animate-hover-btn btn-xl radius-3">
                                             <span>{{ $item->button_title }}</span><i class="icon icon-arrow-right"></i>
@@ -57,7 +58,7 @@
          <section class="featured-section">
             <div class="container">
                     <div class="sec-title">
-                        <h2>How I can Help</h2>
+                        <h2>How I Can Help</h2>
                         <!-- <div class="text">We believe what we achieve</div> -->
                     </div>
                     <div class="row clearfix">
@@ -191,7 +192,7 @@
                                     <div class="blog-article-item wow fadeInUp" data-wow-delay="0s">
                                         <div class="article-thumb h-460">
                                             <a href="{{ route('blog.details', $blog->slug) }}">
-                                                <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
+                                                @include('components.responsive-image', ['path' => $blog->cover_image, 'alt' => $blog->title, 'class' => '', 'sizes' => '(max-width: 768px) 100vw, 33vw', 'lazyload' => true])
                                             </a>
                                         </div>
                                         <div class="article-content">

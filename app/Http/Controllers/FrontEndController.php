@@ -66,7 +66,7 @@ class FrontEndController extends Controller
                     'project' => $project,
                     'title' => $project->name,
                         'breadcrumbs' => [
-                            ['url' => '/projects', 'label' => 'Projects'],
+                            ['url' => route('portfolio'), 'label' => 'Projects'],
                         ],   
                     ]);
 

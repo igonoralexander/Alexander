@@ -35,7 +35,7 @@
                     <div class="row clearfix">
                         <div class="link-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
                             <div class="link-box">
-                                <a href="https://drive.google.com/file/d/1rCmSwZW0DDKXS6bcU1VmYJfG5-YbanRF/view?usp=drive_link" target="_blank" class="theme"><span class="btn-title"> My Resume</span></a>
+                                <a href="https://drive.google.com/file/d/1rCmSwZW0DDKXS6bcU1VmYJfG5-YbanRF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="theme"><span class="btn-title">My Resume</span></a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="lower-content">
                                         <h3><a href="#">Backend Development</a></h3>
-                                        <div class="text">Proficient in Programming langugagues and Frameworks such as PHP, Python, Laravel, Django, and Node.js. Experience in integrating third-party services using REST APIs (JSON, XML formats)
+                                        <div class="text">Proficient in programming languages and frameworks such as PHP, Python, Laravel, Django, and Node.js. Experience in integrating third-party services using REST APIs (JSON, XML formats)
                                         </div>
                                     </div>
                                 </div>

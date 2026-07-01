@@ -15,7 +15,7 @@
         <section class="flat-spacing-5 pt_0">
             <div class="container">
                 <div class="sec-title" style = "margin-top: 20px;">
-                        <h1>Projects Highlights</h1>
+                        <h2>Project Highlights</h2>
                         <div class="text" style = "font-size: 14px;">Projects that highlight innovation, efficiency, and user-focused design, demonstrating proven results and expertise.</div>
                 </div>
                 <div class="flat-animate-tab">
@@ -39,14 +39,14 @@
                                     <!-- card product 1 -->
                                     <div class="card-product style-9">
                                         <div class="card-product-wrapper">
-                                            <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="product-img">
-                                                <img class="lazyload img-product" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{$item->name }}">
-                                                <img class="lazyload img-hover" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{$item->name }}">
+                                            <a href="{{ route('project.details', $item->slug) }}" class="product-img">
+                                                @include('components.responsive-image', ['path' => $item->image, 'alt' => $item->name, 'class' => 'img-product', 'sizes' => '(max-width: 768px) 100vw, 33vw', 'lazyload' => true])
+                                                @include('components.responsive-image', ['path' => $item->image, 'alt' => $item->name, 'class' => 'img-hover', 'sizes' => '(max-width: 768px) 100vw, 33vw', 'lazyload' => true])
                                             </a>
                                         </div>
                                         <div class="card-product-info">
                                             <div class="inner-info">
-                                                <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="title link fw-6">{{$item->name }}</a>
+                                                <a href="{{ route('project.details', $item->slug) }}" class="title link fw-6">{{$item->name }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -61,14 +61,14 @@
                                     @foreach ($category->projects as $item)
                                         <div class="card-product style-9">
                                             <div class="card-product-wrapper">
-                                                <a href="{{ route('project.details', $item->slug) }}" target="_blank" class="product-img">
+                                                <a href="{{ route('project.details', $item->slug) }}" class="product-img">
                                                     <img class="lazyload img-product" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name }}">
                                                     <img class="lazyload img-hover" data-src="{{ asset($item->image) }}" src="{{ asset($item->image) }}" alt="{{ $item->name }}">
                                                 </a>
                                             </div>
                                             <div class="card-product-info">
                                                 <div class="inner-info">
-                                                    <a href="{{ route('project.details', $item->slug) }} " target="_blank" class="title link fw-6">{{ $item->name }}</a>
+                                                    <a href="{{ route('project.details', $item->slug) }}" class="title link fw-6">{{ $item->name }}</a>
                                                 </div>
                                             </div>
                                         </div>

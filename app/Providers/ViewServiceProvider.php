@@ -47,54 +47,63 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Use View::composer to pass data to all views
         View::composer('*', function ($view) {
-            // Fetch necessary data
-            $settings = SiteSettings::first();
-            $mostReadPosts = BlogPost::orderBy('views_count', 'desc')->take(5)->get();
+            $request = request();
+            $key = 'shared_view_data';
 
-            $view->with([
-                'setting' => SiteSettings::first(),
-                'favicon' => $settings ? $settings->favicon : null,
-                'logo' => $settings ? $settings->logo : null,
-                'breadcrumb_image' => $settings ? $settings->breadcrumb_image : null,
-                'contact' => ContactUs::first(),
-                'mostReadPosts' => $mostReadPosts,
-                'terms_conditions' => TermsCondition::first(),
-                'privacy_policy' => PrivacyPolicy::first(),
-                'aboutsection' => AboutSection::first(),
-                'parallaxsection' => ParallaxSection::first(),
-                'about' => AboutUs::first(),
-                'howweworkpage' => HowWeWorkPage::first(),
-                'faq' => FAQ::all(),
-                'mainslider' => MainSlider::all(),
-                'industrs' => Industry::all(),
-                'industrys' => Industry::orderBy('id', 'asc')->take(6)->get(),
-                'servicessection' => ServicesSection::take(6)->get(),
-                'services' => ServicesSection::All(),
-                'projects' => Project::latest()->paginate(6),
-                'causes' => Causes::latest()->paginate(3),
-                'events' => Events::all(),
-                'howwework' => HowWeWork::all(),
-                'blogs' => BlogPost::with(['admin', 'blogcategory'])
-                        ->orderBy('created_at', 'desc')->get(),
-                
-                'blogpage' => BlogPost::with(['admin', 'blogcategory'])
-                        ->orderBy('created_at', 'desc')->get(),
+            // Nested layouts and partials share this array, so the same queries do not rerun per include.
+            if (!$request->attributes->has($key)) {
+                $request->attributes->set($key, $this->sharedViewData());
+            }
 
-                'clients' => Client::all(),
-                'tags' => Tag::all(),
-                'categorys' => BlogCategory::withCount('blogposts')->get(),
-                'techstacks' => TechStack::all(),
-                'volunters' => Volunters::take(4)->get(),
-                'latestcontact' => Contact::take(4)->get(),
-                'securityteam' => Volunters::All(),
-                'gallery' => Gallery::all(),
-                'whychooseus' => WhyChooseUs::all(),
-                'corevalues' => CoreValue::take(3)->get(),
-                'gallerysection' => Gallery::latest()->take(6)->get(),
-                'testimonial' => Testimonial::all(),
-            ]);
+            $view->with($request->attributes->get($key));
         });
+    }
+
+    private function sharedViewData()
+    {
+        $settings = SiteSettings::first();
+        $blogs = BlogPost::with(['admin', 'blogcategory'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return [
+            'setting' => $settings,
+            'favicon' => $settings ? $settings->favicon : null,
+            'logo' => $settings ? $settings->logo : null,
+            'breadcrumb_image' => $settings ? $settings->breadcrumb_image : null,
+            'contact' => ContactUs::first(),
+            'mostReadPosts' => BlogPost::orderBy('views_count', 'desc')->take(5)->get(),
+            'terms_conditions' => TermsCondition::first(),
+            'privacy_policy' => PrivacyPolicy::first(),
+            'aboutsection' => AboutSection::first(),
+            'parallaxsection' => ParallaxSection::first(),
+            'about' => AboutUs::first(),
+            'howweworkpage' => HowWeWorkPage::first(),
+            'faq' => FAQ::all(),
+            'mainslider' => MainSlider::all(),
+            'industrs' => Industry::all(),
+            'industrys' => Industry::orderBy('id', 'asc')->take(6)->get(),
+            'servicessection' => ServicesSection::take(6)->get(),
+            'services' => ServicesSection::all(),
+            'projects' => Project::latest()->take(6)->get(),
+            'causes' => Causes::latest()->take(3)->get(),
+            'events' => Events::all(),
+            'howwework' => HowWeWork::all(),
+            'blogs' => $blogs,
+            'blogpage' => $blogs,
+            'clients' => Client::all(),
+            'tags' => Tag::all(),
+            'categorys' => BlogCategory::withCount('blogposts')->get(),
+            'techstacks' => TechStack::all(),
+            'volunters' => Volunters::take(4)->get(),
+            'latestcontact' => Contact::take(4)->get(),
+            'securityteam' => Volunters::all(),
+            'gallery' => Gallery::all(),
+            'whychooseus' => WhyChooseUs::all(),
+            'corevalues' => CoreValue::take(3)->get(),
+            'gallerysection' => Gallery::latest()->take(6)->get(),
+            'testimonial' => Testimonial::all(),
+        ];
     }
 }

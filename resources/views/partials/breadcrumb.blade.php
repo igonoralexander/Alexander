@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                         <br>
-                        <div class="heading text-center"><strong style = "color: white;"> {{$title}} </strong></div>
+                        <h1 class="heading text-center text-white">{{ $title }}</h1>
                         <ul class="breadcrumbs d-flex align-items-center justify-content-center" >
                             <li>
                                 <a href="/"> <strong style = "color: white;"> Home </strong> </a>

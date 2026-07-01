@@ -13,7 +13,7 @@
                                     <div class="blog-article-item">
                                         <div class="article-thumb radius-10">
                                             <a href="{{ route('blog.details', $item->slug) }}">
-                                                <img class="lazyload" data-src="{{ asset($item->cover_image)}}" src="{{ asset($item->cover_image)}}" alt="{{ $item->title }}">
+                                                @include('components.responsive-image', ['path' => $item->cover_image, 'alt' => $item->title, 'class' => '', 'sizes' => '(max-width: 768px) 100vw, 33vw', 'lazyload' => true])
                                             </a>
                                         </div>
                                         <div class="article-content">

@@ -10,9 +10,14 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^8.0.0",
         "axios": "^0.21",
+        "bootstrap": "^4.6.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "purgecss": "^8.0.0",
+        "sass": "^1.101.0",
+        "sass-loader": "^12.6.0"
     }
 }

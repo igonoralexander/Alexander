@@ -16,7 +16,7 @@
         <div class="container">
             <div class="featured-row">
                 <div class="sec-title centered">
-                    <h1>Service Offerings </h1>
+                    <h2>Service Offerings</h2>
                     <div class="text" style="font-size: 14px;">I provide tailored digital solutions that drive growth, enhance efficiency, and deliver lasting value through innovation and user-centric design.</div>
                 </div>
                 <div class="row clearfix">

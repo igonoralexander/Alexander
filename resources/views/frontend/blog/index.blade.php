@@ -22,7 +22,7 @@
                                 <div class="blog-article-item style-row">
                                     <div class="article-thumb">
                                         <a href="{{ route('blog.details', $blog->slug) }}">
-                                            <img class="lazyload" data-src="{{ asset($blog->cover_image)}}" src="{{ asset($blog->cover_image)}}" alt="{{ $blog->title }}">
+                                            @include('components.responsive-image', ['path' => $blog->cover_image, 'alt' => $blog->title, 'class' => '', 'sizes' => '(max-width: 768px) 100vw, 50vw', 'lazyload' => true])
                                         </a>
                                     </div>
                                     <div class="article-content">

@@ -14,16 +14,31 @@
     
    <!-- font -->
    <link rel="stylesheet" href="{{ asset ('frontend/fonts/fonts.css') }}">
-   <link rel="canonical" href="https://igsoftware.com.ng/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZbYFc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/youngserif/v2/3qTpojO2nS2VtkB3KtkQZ1t93kY.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiGyp8kv8JHgFVrJJLucHtA.woff2" as="font" type="font/woff2" crossorigin>
+   @include('layouts.frontend.inc.canonical')
    <!-- Icons -->
    <link rel="stylesheet" href="{{ asset ('frontend/fonts/font-icons.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/bootstrap.min.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/swiper-bundle.min.css') }}">
    <link rel="stylesheet" href="{{ asset ('frontend/css/animate.css') }}">
+   <link rel="stylesheet" href="{{ asset ('frontend/css/bootstrap-select.min.css') }}">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 
-   <link rel="stylesheet" type="text/css" href="{{ asset ('frontend/css/styles.css') }}"/>
+   <!-- Critical CSS (inlined to render above-the-fold quickly) -->
+   <style>
+       :root{--bg:#ffffff}
+       *,*::before,*::after{box-sizing:border-box}
+       html,body{height:100%}
+       body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+       /* Minimal critical styles for header/loader and basic layout */
+       .preload{display:block}
+       #wrapper{min-height:100vh}
+    </style>
+     <link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="{{ asset('storage/' . $favicon) }}">
@@ -69,17 +84,8 @@
     @include('layouts.frontend.inc.toolbar-side')
 
     <!-- Javascript -->
-    <script type="text/javascript" src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/swiper-bundle.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/carousel.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-select.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/lazysize.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-select.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/count-down.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/wow.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/multiple-modal.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('frontend/js/main.js') }}"></script>
+    <script defer src="{{ asset('frontend/js/vendor.bundle.js') }}"></script>
+    <script defer src="{{ asset('frontend/js/frontend.bundle.js') }}"></script>
 </body>
 
 </html>

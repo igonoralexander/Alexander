@@ -70,13 +70,16 @@
 
 
     // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        items: 1
-    });
+    // Testimonials carousel initializer (lazy)
+    window.initCarousels = function() {
+        $(".testimonial-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1500,
+            dots: true,
+            loop: true,
+            items: 1
+        });
+    };
     
     
     // Back to top button

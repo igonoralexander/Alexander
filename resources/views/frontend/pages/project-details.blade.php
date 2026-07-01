@@ -22,25 +22,18 @@
                                         <a href="/" class="tags-item">Home</a>
                                     </li>
                                     <li>
-                                        <a href="/projects" class="tags-item">Projects</a>
+                                        <a href="{{ route('portfolio') }}" class="tags-item">Projects</a>
                                     </li>
                                 </ul>
-                                <div class="title">{{ $project->name }}</div>
+                                <h1 class="title">{{ $project->name }}</h1>
                                 <div class="image">
-                                    <img class="lazyload" data-src="{{ asset($project->image)}}" src="{{ asset($project->image)}}" alt="{{ $project->name }}">
+                                    @include('components.responsive-image', ['path' => $project->image, 'alt' => $project->name, 'class' => '', 'sizes' => '100vw', 'lazyload' => true])
                                 </div>
                             </div>
                             <div class="desc">{!! $project->content !!}</div>
                             <div class="global-reset bot d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="d-flex align-items-center gap-20">
-                                    <p>Share:</p>
-                                    <ul class="tf-social-icon d-flex style-default">
-                                        <li><a href="#" class="box-icon round social-facebook border-line-black"><i class="icon fs-14 icon-fb"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-twiter border-line-black"><i class="icon fs-12 icon-Icon-x"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-instagram border-line-black"><i class="icon fs-14 icon-instagram"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-tiktok border-line-black"><i class="icon fs-14 icon-tiktok"></i></a></li>
-                                        <li><a href="#" class="box-icon round social-pinterest border-line-black"><i class="icon fs-14 icon-pinterest-1"></i></a></li>
-                                    </ul>
+                                    <a href="{{ route('portfolio') }}" class="tf-btn btn-line fw-6">Back to projects<i class="icon icon-arrow1-top-left"></i></a>
                                 </div>
                             </div>
                         </div>

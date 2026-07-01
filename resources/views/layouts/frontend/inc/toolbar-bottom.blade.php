@@ -1,7 +1,7 @@
  <!-- toolbar-bottom -->
  <div class="tf-toolbar-bottom type-1150">
         <div class="toolbar-item">
-            <a href="/" aria-controls="offcanvasLeft">
+            <a href="/">
                 <div class="toolbar-icon">
                 <i class="fas fa-home"></i>
                 </div>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="toolbar-item">
-            <a href="https://wa.me/+2347069198779?text=Hello%20Alexander" target="_blank" aria-label="Chat with us on WhatsApp">
+            <a href="https://wa.me/+2347069198779?text=Hello%20Alexander" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
                 <div class="toolbar-icon">
                     <i class="fab fa-whatsapp"></i>
                 </div>
